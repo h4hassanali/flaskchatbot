@@ -90,3 +90,20 @@ button {
 }
 
 /* Add more styles as needed */
+/* Styles for user and response avatars */
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px; /* Adjust spacing between avatar and message text */
+}
+
+.user-avatar {
+    float: left; /* Align user avatar to the left */
+    clear: both; /* Clear floating elements */
+}
+
+.response-avatar {
+    float: right; /* Align response avatar to the right */
+    clear: both; /* Clear floating elements */
+}

@@ -28,14 +28,28 @@ function getPredictedResponse() {
 }
 
 // Function to append a message to the chat history
+// Function to append a message to the chat history
 function appendMessage(message, sender) {
     const chatHistory = document.getElementById('chat-history');
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', sender);
-    messageElement.innerText = message;
+    
+    // Create image element for avatar
+    const avatar = document.createElement('img');
+    avatar.classList.add('avatar');
+    avatar.src = sender === 'user' ? '/static/sender.jpeg' : '/static/sender.jpeg'; // Adjust path based on your project structure
+
+    // Append avatar to message element
+    messageElement.appendChild(avatar);
+
+    // Append message text to message element
+    const messageText = document.createElement('div');
+    messageText.innerText = message;
+    messageElement.appendChild(messageText);
+
+    // Append message element to chat history
     chatHistory.appendChild(messageElement);
 
     // Automatically scroll to the bottom of the chat history
     messageElement.scrollIntoView();
 }
-
