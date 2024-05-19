@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="/static/style1.css">
-
 <head>
     <meta charset="UTF-8">
     <title>HU-CHATBOT</title>
+    <link rel="stylesheet" href="/static/style1.css">
 </head>
 <body>
 <div class="container">
@@ -12,12 +11,23 @@
         <div class="chatbox__support">
             <div class="chatbox__header">
                 <div class="chatbox__image--header">
-                    <img src="/static/hulogo.png" alt="image"
-                    style="width: 55px; height: 55px;">
+                    <img src="/static/hulogo.png" alt="image" style="width: 55px; height: 55px;">
                 </div>
                 <div class="chatbox__content--header">
+                    
                     <h4 class="chatbox__heading--header">Hazara University</h4>
-                    <p class="chatbox__description--header">AI CHATBOT, I am 24/7 online</p>
+                    <p class="chatbox__description--header">
+                        AI Chatbot, I am 24/7 online
+                  
+                        <!-- Container for Dark Mode Toggle -->
+                        <div class="dark-mode-container">
+                            <span style="color: white;">Dark Mode</span>
+                            <label class="switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </p>
                 </div>
             </div>
             <div class="chatbox__messages">
@@ -29,12 +39,12 @@
             </div>
         </div>
         <div class="chatbox__button">
-            <button style="background-color:#181a88"><img src="/static/hulogo.png" style="width: 45px; height: 45px;"/></button>
+            <button style="background-color:#181a88">
+                <img src="/static/hulogo.png" style="width: 45px; height: 45px;"/>
+            </button>
         </div>
     </div>
 </div>
-
-    <script src="/static/app.js"></script>
-
+<script src="/static/app.js"></script>
 </body>
 </html>

@@ -135,8 +135,10 @@ body {
     box-shadow: var(--primaryBoxShadow);
 }
 
+
 .chatbox__image--header {
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .chatbox__heading--header {
@@ -214,4 +216,106 @@ body {
     border-bottom-left-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:checked + .slider {
+    background-color: #1d1b98;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Dark Mode Styles */
+
+.dark-mode-container{
+margin-left: 120px;
+margin-right: -80px;
+margin-top: 10px;
+
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+.chatbox__support.dark-mode {
+    background: #1E1E1E;
+}
+
+.chatbox__header.dark-mode {
+    background: #333333;
+}
+
+.chatbox__heading--header.dark-mode, 
+.chatbox__description--header.dark-mode {
+    color: #E0E0E0;
+}
+
+.chatbox__messages.dark-mode {
+    background: #1E1E1E;
+}
+
+.messages__item.dark-mode {
+    background: #2C2C2C;
+    color: #E0E0E0;
+}
+
+.messages__item--operator.dark-mode {
+    background: #4A4A4A;
+    color: #E0E0E0;
+}
+
+.chatbox__footer.dark-mode {
+    background: #333333;
+}
+
+.chatbox__footer input.dark-mode {
+    background: #2C2C2C;
+    color: #E0E0E0;
+}
+
+.chatbox__button button.dark-mode {
+    background: #333333;
+    color: #E0E0E0;
 }
