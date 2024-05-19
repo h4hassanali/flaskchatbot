@@ -1,0 +1,207 @@
+{
+  "intents": [
+    {
+      "tag": "admission_general",
+      "patterns": [
+      "what is the procedure to apply for admission?"
+, "how to apply for admission?",
+"How to get admission in",
+"Where to get admission in",
+"How to take admission in"
+, "where to apply for admission?"
+, "tell me about admissions?"
+, "admission"
+, "can I apply online for admission?"
+, "give me the admission form"
+, "where to apply for admission?"
+, "what are the steps to apply for admission?"
+, "how can I start the admission process?"
+, "where do I find the admission guidelines?"
+, "is there an online portal for admissions?"
+, "how do I access the admission application?"
+, "where can I get the admission form?"
+, "what is the online application process for admission?"
+, "how do I apply for admission online?"
+, "can I download the admission form online?"
+, "what is the link to the admission portal?"
+, "how to fill out the admission form?"
+, "what is the deadline to apply for admission?"
+      ],
+      "responses": [
+        "We only process admission applications submitted online. You can apply online for admission through the online admission portal of Hazara University Mansehra.<br> Here is the link to the admission portal: <a href=\"https://lms.hu.edu.pk/admissions/register\" style=\"color: white;\">Online Admission Portal</a> <br><br><br> <img src=\"/static/images/testadmission.png\" height=\"230\" width=\"285\"><br><br>Please play this : <br> <audio controls style=\"width: 285px; height: 230px; margin-top:-150px;\"><source src=\"/path/to/audio/file.mp3\" type=\"audio/mpeg\">Your browser does not support the audio element.</audio>"
+
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_Requirements",
+      "patterns": [
+        "What documents are required for admission?"
+, "Admission Requirements"
+, "Things required for admission"
+, "What are the steps to apply for admission?"
+, "Is Fsc DMC required for admission?"
+, "I don't have Fsc DMC now, can I apply?"
+, "My result is pending, can I apply for admission?"
+, "Which docs to upload on the online portal?"
+, "Which documents do I need for admission?"
+, "What are the academic requirements for admission?"
+, "Do I need a recommendation letter for admission?"
+, "Is a personal statement required for admission?"
+, "Are there any specific forms needed for admission?"
+, "Do I need to submit my ID card for admission?"
+, "Are passport,sized photos required for admission?"
+, "Do I need my birth certificate for admission?"
+, "What financial documents are required for admission?"
+, "Do I need to provide proof of residence for admission?"
+, "Are there any medical requirements for admission?"
+, "What additional documents are needed for international students?"  
+      ],
+      "responses": [
+        "Following docs are required for admission"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_opening_closing",
+      "patterns": [
+        "Are admssions open now?",
+        "When Masters admission will open?",
+        "Please tell me when admission will open",
+        "Are admissions available?",
+        "Is admission portal accepting applications for admissions?",
+        "When you will start accepting admission applications",
+        "Does admission closed now?",
+        "Are admissions closed?",
+        "Admission open",
+        "Admission Closed",
+        "admission close",
+        "When admission for MS will open?",
+        "When BS Admissions will open?",
+        "What is starting date of admissions?",
+        "What is admission closing date?",
+        "Admission Starting Date",
+        "Admission Closing Date"
+
+      ],
+      "responses": [
+        "Admissions are open from this to this date in following deparrtments"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_eligibility",
+      "patterns": [
+        "How much marks are required for admission in",
+        "What is minimum gpa required for admission in",
+        "What are minimum marks for admission in",
+        "How much marks in Fsc are required for admission?",
+        "I have 60 percent marks , can i apply?",
+        "Am i eligible for admission?",
+        "What is eligibility for admission?",
+        "I have A grade in Fsc , can i apply?",
+        "I have B grade , am I eligible for admission?",
+        "Am i eligible for admission?",
+        "Will I get the admission",
+        "What is my merit ?",
+        "Will i be on merit",
+        "Eligible for admission?",
+        "Please calculate my merit",
+        "How to calculate merit",
+        "How merit is calculated"
+        
+      ],
+      "responses": [
+        "Only 60 percent marks are required , click here to calculate your merit"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_test",
+      "patterns": [
+      "Is there any entry test for admission?"
+, "Do I have to give an admission test?"
+, "Admission test"
+, "What admission test is required?"
+, "What is the syllabus for the admission test?"
+, "Is there any admission test?"
+, "When is the admission test scheduled?"
+, "What is the format of the admission test?"
+, "How to prepare for the admission test?"
+, "Is the admission test mandatory?"
+, "What are the passing marks for the admission test?"
+, "Can I get a sample paper for the admission test?"
+, "Are there any practice tests for the admission test?"
+, "How long is the admission test?"
+, "What subjects are covered in the admission test?"
+, "Is there any negative marking in the admission test?"
+, "Where will the admission test be held?"
+, "Can I retake the admission test if I fail?"
+, "Is there an online option for the admission test?"
+, "What is the fee for the admission test?"
+  
+        
+      ],
+      "responses": [
+        "Admission test is for only this this dept , in other depts we do merit on basis of marks"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission_fee",
+      "patterns": [  
+        "What is the application fee for admission?"
+, "What is the admission fee?"
+, "How much fee is required for the admission application?"
+, "Is there any application fee for admission?"
+, "What are the tuition fees for admission?"
+, "Are there any additional fees for admission?"
+, "Do I need to pay a deposit for admission?"
+, "Is the admission fee refundable?"
+, "Can I pay the admission fee in installments?"
+, "What is the fee structure for admission?"
+, "Are there any discounts on the admission fee?"
+, "What are the payment methods for the admission fee?"
+, "Is there a late fee for admission applications?"
+, "What is the fee for international student admission?"
+, "Are there any hidden charges in the admission fee?"
+, "How do I pay the admission fee?"
+, "Is the admission fee different for different programs?"
+, "What is the fee waiver policy for admission?"
+, "Where can I find information about the admission fee?"
+        
+      ],
+      "responses": [
+        "This is admission fee , pay challan in bank or online"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "semester_fee",
+      "patterns": [  
+        "What is semester fee?",
+        "How much semester fee i have to pay",
+        "What is fee for one semester",
+        "What is tution fee",
+        "How much semester fee",
+        "How much tution fee",
+        "What is fee structure",
+        "Fee structure for BS",
+        "Fee structure for MS",
+        "What is semester fee for Masters",
+        "What is semester fee for Bachelors",
+        "How much tution fee for MS",
+        "How much tution fee for BS",
+        "Detailed semester fee structure",
+        "Fee structure",
+        "Detailed fee structure",
+        "Where to get fee structure"
+        
+      ],
+      "responses": [
+        "Fee structure for different programs is here in this image"
+      ],
+      "context_set": ""
+    }
+  ]
+}
