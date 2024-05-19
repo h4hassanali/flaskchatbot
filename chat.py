@@ -10,7 +10,7 @@ app = Flask(__name__, static_url_path='/static')
 
 def load_data_and_model():
     # Load intents data from a JSON file
-    with open('NeuralNet\\intents.json', 'r') as json_data:
+    with open('NeuralNet\\dataset.json', 'r') as json_data:
         intents = json.load(json_data)
 
     # Load the pre-trained model and data
@@ -63,7 +63,7 @@ def run_chatbot(question):
 @app.route('/')
 
 def index():
-    return render_template('index.html')
+    return render_template('base.html')
 
 # Route to handle POST requests for predicted response
 @app.route('/get_response', methods=['POST'])
