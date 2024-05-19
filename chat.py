@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import json
 import random
 import torch
+import os
 from NeuralNet.model import NeuralNet
 from NeuralNet.utils import tokenize, stem, bag_of_words
 
@@ -79,5 +80,8 @@ def get_response():
     # Return the predicted response as JSON
     return ({'response': predicted_response})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(host='192.168.100.4',debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
