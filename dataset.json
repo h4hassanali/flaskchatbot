@@ -410,12 +410,12 @@
         {
             "tag": "test",
             "patterns": [
-                "hg"
+                "test1,test2,test3"
             ],
             "responses": [
-                "jjh"
+                "res1,res2"
             ],
-            "context_set": null
+            "context_set": ""
         }
     ]
 }

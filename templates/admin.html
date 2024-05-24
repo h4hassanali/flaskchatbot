@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <!-- Include SimpleMDE library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            position: relative;
+        }
+
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: calc(32% - 20px); /* Adjust width to fit three cards per row */
+            flex: 1 0 auto;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 15px 30px;
+            margin-right: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #007bff;
+        }
+
+        .logout-btn {
+            background-color: #333;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Add New Intent</h2>
+            <p>Click below to add a new intent</p>
+            <a href="/add_intent_page" class="btn">Add New Intent</a>
+        </div>
+        <div class="card">
+            <h2>Edit Responses</h2>
+            <p>Click below to edit responses</p>
+            <a href="/edit_responses" class="btn">Edit Responses</a>
+        </div>
+    </div>
+    <a href="/logout" class="btn logout-btn">Logout</a>
+    <div class="footer">
+        Admin Dashboard &copy; 2024. All rights reserved.
+    </div>
+</body>
+</html>
