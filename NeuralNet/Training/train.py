@@ -130,7 +130,7 @@ def main():
             print(f'Epoch [{epoch + 1}/{num_epochs}], Progress: {progress:.2f}%')
     
             # If progress reaches or exceeds 101%, reset to 0
-            if progress >= 101:
+            if progress == 100:
                 progress = 0
                 print('Training progress reset to zero.')
             else:
