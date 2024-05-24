@@ -197,7 +197,7 @@ def get_response():
 def admin():
     return render_template('admin.html')
 
-@app.route('/update_responses', methods=['POST'])
+@app.route('/update_response', methods=['POST'])
 @login_required
 def update_responses():
     intents, _, _, _, _ = load_data_and_model()
@@ -256,6 +256,28 @@ def edit_responses():
     return render_template('edit_responses.html', intents=intents['intents'])
 
 
+@app.route('/train_model_page', methods=['GET'])
+@login_required
+def train_model_page():
+        return render_template('train.html')
+    
+
+@app.route('/train_model', methods=['POST'])
+@login_required
+def train_model():
+    # Ensure you set the correct path to your training script
+    os.system('python NeuralNet\\Training\\train.py')
+    return redirect(url_for('admin'))
+
+# Add a route to provide training progress
+@app.route('/get_training_progress', methods=['GET'])
+def get_training_progress():
+    try:
+        with open('training_progress.txt', 'r') as file:
+            progress = float(file.read())
+        return jsonify({'progress': progress})
+    except FileNotFoundError:
+        abort(404)
 
 
 # Define a dictionary of users (in a real application, you'd use a database)
