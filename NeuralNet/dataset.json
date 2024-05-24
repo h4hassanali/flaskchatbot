@@ -145,7 +145,7 @@
                 "What is the fee for the admission test?"
             ],
             "responses": [
-                "<p>Admission test is only for this this dept and this this program, in other depts we do merit calculation on basis of marks, i edit it </p>"
+                "<p>Admission test is only for this this dept and this this program, in other depts we do merit calculation on basis of marks</p>"
             ],
             "context_set": ""
         },
@@ -404,6 +404,16 @@
             ],
             "responses": [
                 "<p>Here is the Course Change Form : <br><br><br><embed src=\"static/PDFs/change_course.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "test",
+            "patterns": [
+                "test1,test2,test3"
+            ],
+            "responses": [
+                "res1,res2"
             ],
             "context_set": ""
         }

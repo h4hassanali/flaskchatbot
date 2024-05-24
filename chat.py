@@ -308,6 +308,28 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
+@app.route('/delete_intent_page')
+@login_required
+def delete_intents_page():
+    intents, _, _, _, _ = load_data_and_model()
+    return render_template('delete_intent.html', intents=intents['intents'])
+
+@app.route('/delete_intents', methods=['POST'])
+@login_required
+def delete_intents():
+    intents_to_delete = request.form.getlist('intents_to_delete[]')
+    if not intents_to_delete:
+        abort(400, description="Intents to delete not provided")
+
+    intents, _, _, _, _ = load_data_and_model()
+    updated_intents = [intent for intent in intents['intents'] if intent['tag'] not in intents_to_delete]
+
+    with open(DATASET_PATH, 'w') as json_data:
+        json.dump({"intents": updated_intents}, json_data, indent=4)
+
+    return redirect(url_for('admin'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
