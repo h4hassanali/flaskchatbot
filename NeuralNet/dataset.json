@@ -28,7 +28,7 @@
                 "what is the deadline to apply for admission?"
             ],
             "responses": [
-                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"/static/PDFs/Refund_Form.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\n"
+                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"http://127.0.0.1:5000/static/uploads/Graduate_Program_Rules_Revised_2023.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\n<embed src=\"/static/uploads/bytewise.pdf\" style=\"width: 285px;height:450px;\"></embed>\r\n<img src=\"/static/uploads/image1.jpeg\" style=\"width: 285px;height:450px;\">"
             ],
             "context_set": ""
         },
@@ -201,7 +201,7 @@
                 "Where to get fee structure"
             ],
             "responses": [
-                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>"
+                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>\r\n<img src=\"http://127.0.0.1:5000/static/uploads/image2.jpeg\" style=\"width:285px; height:400px;\">"
             ],
             "context_set": ""
         },
@@ -404,16 +404,6 @@
             ],
             "responses": [
                 "<p>Here is the Course Change Form : <br><br><br><embed src=\"static/PDFs/change_course.pdf\" width=\"800\" height=\"500\" style=\"width: 285px;height:450px;\" ></embed><br><br>Please read the instructions in the form very carefully and for further info Visit your concerned academic coordinator or Examination Section</p>"
-            ],
-            "context_set": ""
-        },
-        {
-            "tag": "test",
-            "patterns": [
-                "test1,test2,test3"
-            ],
-            "responses": [
-                "res1,res2"
             ],
             "context_set": ""
         }

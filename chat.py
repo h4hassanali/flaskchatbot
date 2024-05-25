@@ -1,91 +1,3 @@
-# from flask import Flask, render_template, request, jsonify
-# import json
-# import random
-# import torch
-# import os
-# from NeuralNet.model import NeuralNet
-# from NeuralNet.utils import tokenize, stem, bag_of_words
-
-# app = Flask(__name__, static_url_path='/static')
-
-# def load_data_and_model():
-#     # Load intents data from a JSON file
-#     with open('NeuralNet\\dataset.json', 'r') as json_data:
-#         intents = json.load(json_data)
-
-#     # Load the pre-trained model and data
-#     FILE = "NeuralNet\\data.pth"
-#     data = torch.load(FILE)
-
-#     input_size = data["input_size"]
-#     hidden_size = data["hidden_size"]
-#     output_size = data["output_size"]
-#     all_words = data['all_words']
-#     tags = data['tags']
-#     model_state = data["model_state"]
-
-#     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-#     model = NeuralNet(input_size, hidden_size, output_size).to(device)
-#     model.load_state_dict(model_state)
-#     model.eval()
-
-#     return intents, all_words, tags, model, device
-
-# def chatbot_response(intents, all_words, tags, model, device, sentence):
-#     sentence = tokenize(sentence)
-#     X = bag_of_words(sentence, all_words)
-#     X = X.reshape(1, X.shape[0])
-#     X = torch.from_numpy(X).to(device)
-
-#     output = model(X)
-#     _, predicted = torch.max(output, dim=1)
-
-#     tag = tags[predicted.item()]
-
-#     probs = torch.softmax(output, dim=1)
-#     prob = probs[0][predicted.item()]
-
-#     if prob.item() > 0.75:
-#         for intent in intents['intents']:
-#             if tag == intent["tag"]:
-#                 return f"{random.choice(intent['responses'])}"
-#     else:
-#         return f"I do not understand your query , Please tell me in detail."
-
-# intents, all_words, tags, model, device = load_data_and_model()
-
-# def run_chatbot(question):
-#     sentence = question
-#     response = chatbot_response(intents, all_words, tags, model, device, sentence)
-#     return response
-
-# # Route to render the index.html file
-# @app.route('/')
-
-# def index():
-#     return render_template('base.html')
-
-# # Route to handle POST requests for predicted response
-# @app.route('/get_response', methods=['POST'])
-# def get_response():
-#     # Get the question from the request
-#     question = request.json.get('question')
-    
-#     # Process the question (you can replace this with your AI model logic)
-#     # For demonstration purposes, let's just return a simple response
-#     # predicted_response = f"You asked: '{question}'. This is the predicted response."
-#     predicted_response = run_chatbot(question)
-
-#     # Return the predicted response as JSON
-#     return ({'response': predicted_response})
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-# # if __name__ == "__main__":
-# #     port = int(os.environ.get("PORT", 5000))
-# #     app.run(host='0.0.0.0', port=port)
-
 from functools import wraps
 import os
 from flask import session
@@ -96,6 +8,7 @@ import json
 import random
 from NeuralNet.model import NeuralNet
 from NeuralNet.utils import tokenize, bag_of_words
+import mimetypes
 
 app = Flask(__name__, static_url_path='/static')
 # Set a secret key for the Flask application
@@ -108,6 +21,18 @@ logger = logging.getLogger(__name__)
 # Environment configurations
 DATASET_PATH = os.getenv('DATASET_PATH', 'NeuralNet/dataset.json')
 MODEL_PATH = os.getenv('MODEL_PATH', 'NeuralNet/data.pth')
+
+from werkzeug.utils import secure_filename
+
+# Define a folder to save uploaded files
+UPLOAD_FOLDER = 'static/uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Ensure the upload folder exists
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+
 
 def load_data_and_model():
     try:
@@ -207,6 +132,14 @@ def update_responses():
         if new_response:
             intent['responses'] = [new_response]
 
+    # Check for file URL in the form data
+    file_url = request.form.get('file_url')
+    if file_url:
+        tag = request.form.get('tag')
+        for intent in updated_intents['intents']:
+            if intent['tag'] == tag:
+                intent['responses'].append(f'<embed src="{file_url}" style="width: 285px;height:450px;">')
+
     with open(DATASET_PATH, 'w') as json_data:
         json.dump(updated_intents, json_data, indent=4)
 
@@ -241,6 +174,40 @@ def add_intent():
     # Redirect back to the admin page
     return redirect(url_for('admin'))
 
+@app.route('/list_files', methods=['GET'])
+@login_required
+def list_files():
+    upload_folder = app.config['UPLOAD_FOLDER']
+    files = [f for f in os.listdir(upload_folder) if os.path.isfile(os.path.join(upload_folder, f))]
+    file_urls = [url_for('static', filename=f'uploads/{file}', _external=True) for file in files]
+    return jsonify({'files': file_urls})
+
+
+@app.route('/delete_files', methods=['POST'])
+@login_required
+def delete_files():
+    data = request.json
+    file_urls = data.get('file_urls')
+    
+    if not file_urls:
+        return jsonify({'error': 'No files provided'}), 400
+    
+    for file_url in file_urls:
+        filename = file_url.split('/')[-1]
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        
+        if os.path.exists(file_path):
+            os.remove(file_path)
+    
+    return jsonify({'success': True})
+
+
+@app.route('/manage_files')
+@login_required
+def manage_files():
+    return render_template('manage_files.html')
+
+
 
 # Route to render the page for adding a new intent
 @app.route('/add_intent_page')
@@ -260,7 +227,44 @@ def edit_responses():
 @login_required
 def train_model_page():
         return render_template('train.html')
-    
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/upload', methods=['POST'])
+@login_required
+def upload_file():
+    if 'file' not in request.files:
+        flash('No file part')
+        return redirect(request.url)
+    file = request.files['file']
+    if file.filename == '':
+        flash('No selected file')
+        return redirect(request.url)
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        
+        file_url = url_for('static', filename=f'uploads/{filename}')
+        mime_type, _ = mimetypes.guess_type(filename)
+        
+        if mime_type == 'application/pdf':
+            tag = f'<embed src="{file_url}" style="width: 285px;height:450px;"></embed>'
+        elif mime_type.startswith('image'):
+            tag = f'<img src="{file_url}" style="width: 285px;height:450px;">'
+        else:
+            tag = f'Unsupported file format: {filename}'
+        
+        return jsonify({'tag': tag})
+    else:
+        flash('File type not allowed')
+        return redirect(request.url)
+
+
 
 @app.route('/train_model', methods=['POST'])
 @login_required

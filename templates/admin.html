@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
-    <!-- Include SimpleMDE library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <style>
@@ -103,20 +102,20 @@
             <p>Click below to delete an intent</p>
             <a href="/delete_intent_page" class="btn">Delete Intent</a>
         </div>
-        
         <div class="card">
             <h2>Train Model</h2>
             <p>Click below to retrain the model with updated intents</p>
             <a href="/train_model_page" class="btn">Train Model</a>
-
-    
+        </div>
+        <div class="card">
+            <h2>Manage Uploaded Files</h2>
+            <p>Click below to manage uploaded files</p>
+            <a href="/manage_files" class="btn">Manage Files</a>
         </div>
     </div>
     <a href="/logout" class="btn logout-btn">Logout</a>
     <div class="footer">
         Admin Dashboard &copy; 2024. All rights reserved.
     </div>
-
-
 </body>
 </html>

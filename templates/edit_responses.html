@@ -58,22 +58,50 @@
         .save-button:hover {
             background-color: #0056b3;
         }
+
+        .upload-container {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Edit Responses Page</h1>
     {% for intent in intents %}
         <div class="tag-container">
-            <h2>{{ intent.tag }}</h2>
-            <form id="update-{{ intent.tag }}-response" method="POST" action="/update_response">
-                <label for="response_{{ intent.tag }}">Response:</label>
-                <!-- Replace textarea with SimpleMDE markdown editor -->
-                <textarea id="response_{{ intent.tag }}" name="response_{{ intent.tag }}" rows="10" cols="80">{{ intent.responses[0] }}</textarea>
-                <button class="save-button" type="submit" form="update-{{ intent.tag }}-response">Save</button>
-            </form>
+    <h2>{{ intent.tag }}</h2>
+    <form id="update-{{ intent.tag }}-response" method="POST" action="/update_response">
+        <label for="response_{{ intent.tag }}">Response:</label>
+        <!-- Replace textarea with SimpleMDE markdown editor -->
+        <textarea id="response_{{ intent.tag }}" name="response_{{ intent.tag }}" rows="10" cols="80">{{ intent.responses[0] }}</textarea>
+        <button class="save-button" type="submit" form="update-{{ intent.tag }}-response">Save</button>
+    </form>
+    <div class="upload-container">
+        <label for="file_upload_{{ intent.tag }}">Upload File:</label>
+        <input type="file" id="file_upload_{{ intent.tag }}" name="file">
+        <button class="save-button" onclick="uploadFile('{{ intent.tag }}')">Upload</button>
+        <div id="upload_result_{{ intent.tag }}"></div>
+    </div>
+    {% if intent.uploaded_file %}
+        <div class="file-preview">
+            {{ intent.uploaded_file }}
+            <button class="copy-button" onclick="copyHTML('uploaded_file_{{ intent.tag }}')">Copy HTML</button>
         </div>
-    {% endfor %}
+    {% endif %}
+</div>
 
+    {% endfor %}
+    <script>
+        function copyHTML(tagId) {
+            var tag = document.getElementById(tagId);
+            var range = document.createRange();
+            range.selectNode(tag);
+            window.getSelection().removeAllRanges(); // Clear previous selections
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Clear the selection after copying
+        }
+    </script>
+    
     <!-- Initialize SimpleMDE markdown editor -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -81,7 +109,27 @@
                 var simplemde_{{ intent.tag }} = new SimpleMDE({ element: document.getElementById('response_{{ intent.tag }}') });
             {% endfor %}
         });
+
+        function uploadFile(tag) {
+    var input = document.getElementById('file_upload_' + tag);
+    var file = input.files[0];
+    var formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/upload', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Display only the raw tag text without any HTML rendering
+        document.getElementById('upload_result_' + tag).innerText = data.tag;
+    })
+    .catch(error => {
+        console.error('Error uploading file:', error);
+    });
+}
+
     </script>
-    
 </body>
 </html>
