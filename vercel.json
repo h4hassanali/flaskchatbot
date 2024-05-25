@@ -1,14 +1,9 @@
 {
+    "version": 2,
     "builds": [
-        {
-            "src": "flaskchatbot/chat.py",
-            "use": "@vercel/python"
-        }
+        {"src": "chat.py", "use": "@vercel/python"}
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "flaskchatbot/chat.py"
-        }
+        {"src": "/(.*)", "dest": "chat.py"}
     ]
 }
