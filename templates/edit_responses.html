@@ -123,11 +123,33 @@
     .then(response => response.json())
     .then(data => {
         // Display only the raw tag text without any HTML rendering
-        document.getElementById('upload_result_' + tag).innerText = data.tag;
+        var uploadResult = document.getElementById('upload_result_' + tag);
+        uploadResult.innerText = data.tag;
+        
+        // Create a button to copy the raw tag text
+        var copyButton = document.createElement('button');
+        copyButton.innerText = 'Copy Tag';
+        copyButton.addEventListener('click', function() {
+            copyToClipboard(data.tag);
+        });
+        
+        // Append the copy button before the raw tag text
+        uploadResult.insertBefore(copyButton, uploadResult.firstChild);
     })
     .catch(error => {
         console.error('Error uploading file:', error);
     });
+}
+
+// Function to copy text to clipboard
+function copyToClipboard(text) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    
 }
 
     </script>
