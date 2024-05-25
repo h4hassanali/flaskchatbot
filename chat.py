@@ -143,7 +143,7 @@ def update_responses():
     with open(DATASET_PATH, 'w') as json_data:
         json.dump(updated_intents, json_data, indent=4)
 
-    return redirect(url_for('admin'))
+    return redirect(url_for('edit_responses'))
 
 # Add route to handle adding new intents
 @app.route('/add_intent', methods=['POST'])
@@ -172,7 +172,7 @@ def add_intent():
         json.dump(intents, json_data, indent=4)
 
     # Redirect back to the admin page
-    return redirect(url_for('admin'))
+    return redirect(url_for('add_intent_page'))
 
 @app.route('/list_files', methods=['GET'])
 @login_required
