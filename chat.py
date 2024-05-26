@@ -30,7 +30,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure the upload folder exists
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif','mp4','mp3'}
 
 
 
@@ -256,6 +256,10 @@ def upload_file():
             tag = f'<embed src="{file_url}" style="width: 285px;height:450px;"></embed>'
         elif mime_type.startswith('image'):
             tag = f'<img src="{file_url}" style="width: 285px;height:450px;">'
+        elif mime_type == 'audio/mpeg':
+            tag = f'<audio controls src="{file_url}" style="width: 285px;"></audio>'
+        elif mime_type == 'video/mp4':
+            tag = f'<video controls src="{file_url}" style="width: 285px;height:450px;"></video>'
         else:
             tag = f'Unsupported file format: {filename}'
         

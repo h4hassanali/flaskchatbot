@@ -28,7 +28,7 @@
                 "what is the deadline to apply for admission?"
             ],
             "responses": [
-                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"http://127.0.0.1:5000/static/uploads/Graduate_Program_Rules_Revised_2023.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\n\r\n\r\n"
+                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"http://127.0.0.1:5000/static/uploads/Graduate_Program_Rules_Revised_2023.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\n\r\n<audio controls src=\"/static/uploads/tip_small.mp3\" style=\"width: 285px;\"></audio>\r\n<video controls src=\"/static/uploads/islamicquotes_qutoes_ramazan_islamicposts.mp4\" style=\"width: 285px;height:450px;\"></video>"
             ],
             "context_set": ""
         },
