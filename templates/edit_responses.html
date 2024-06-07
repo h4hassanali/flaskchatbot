@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Responses</title>
+    <title>Edit Intents</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <style>
@@ -79,16 +79,24 @@
     </style>
 </head>
 <body>
-    <h1>Edit Responses Page</h1>
+    <h1>Edit Intents Page</h1>
     {% for intent in intents %}
         <div class="tag-container">
-    <h2>{{ intent.tag }}</h2>
-    <form id="update-{{ intent.tag }}-response" method="POST" action="/update_response">
-        <label for="response_{{ intent.tag }}">Response:</label>
-        <!-- Replace textarea with SimpleMDE markdown editor -->
-        <textarea id="response_{{ intent.tag }}" name="response_{{ intent.tag }}" rows="10" cols="80">{{ intent.responses[0] }}</textarea>
-        <button class="save-button" type="submit" form="update-{{ intent.tag }}-response">Save</button>
-    </form>
+            <h2>Edit Tag: {{ intent.tag }}</h2>
+            <form id="update-{{ intent.tag }}-response" method="POST" action="/update_response">
+                <label for="tag_{{ intent.tag }}">Tag:</label>
+                <input type="text" id="tag_{{ intent.tag }}" name="tag_{{ intent.tag }}" value="{{ intent.tag }}" style="width: 250px;">
+                <br>
+                <h3>Edit Patterns:</h3>
+                {% for pattern in intent.patterns %}
+                    <input type="text" name="pattern_{{ intent.tag }}[]" value="{{ pattern }}"style="width: 600px;">
+                    <br>
+                {% endfor %}
+                <h3>Edit Intents:</h3>
+                <textarea id="response_{{ intent.tag }}" name="response_{{ intent.tag }}" rows="10" cols="80">{{ intent.responses[0] }}</textarea>
+                <br>
+                <button class="save-button" type="submit" form="update-{{ intent.tag }}-response">Save</button>
+            </form>
     <div class="upload-container">
         <label for="file_upload_{{ intent.tag }}">Upload File:</label>
         <input type="file" id="file_upload_{{ intent.tag }}" name="file">

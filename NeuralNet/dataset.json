@@ -3,7 +3,7 @@
         {
             "tag": "admission_general",
             "patterns": [
-                "what is the procedure to apply for admission?",
+                "hanjuu",
                 "how to apply for admission?",
                 "How to get admission in",
                 "Where to get admission in",
@@ -28,7 +28,7 @@
                 "what is the deadline to apply for admission?"
             ],
             "responses": [
-                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"http://127.0.0.1:5000/static/uploads/Graduate_Program_Rules_Revised_2023.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\n\r\n\r\n"
+                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"/static/PDFs/Refund_Form.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\nnewew\r\n<embed src=\"/static/uploads/Resume-Hassan-Ali_2.pdf\" style=\"width: 285px;height:450px;\"></embed>"
             ],
             "context_set": ""
         },
@@ -116,7 +116,7 @@
                 "How merit is calculated"
             ],
             "responses": [
-                "<p>Only 60 percent marks are required for admission , click here to calculate your merit. Updated</p>"
+                "<p>Only 60 percent marks in FSc are required for admission</p>\r\n<h3>Please visit to Calculate merit for BS Level :</h3>\r\n<a style=\"color: white;\" href=\"http://127.0.0.1:5000/merit\" target=\"_blank\">Calculate BS Merit</a>\r\n"
             ],
             "context_set": ""
         },
@@ -201,7 +201,7 @@
                 "Where to get fee structure"
             ],
             "responses": [
-                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>\r\n<img src=\"http://127.0.0.1:5000/static/uploads/image2.jpeg\" style=\"width:285px; height:400px;\">"
+                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>"
             ],
             "context_set": ""
         },

@@ -3,16 +3,36 @@ import os
 from flask import session
 import torch
 import logging
-from flask import Flask, render_template, request, jsonify, redirect, url_for, abort
+from flask import Flask, render_template, request, jsonify, redirect, url_for, abort, flash
 import json
 import random
 from NeuralNet.model import NeuralNet
 from NeuralNet.utils import tokenize, bag_of_words
 import mimetypes
 
+
+# File path to store user information
+USERS_FILE = 'users.json'
+
+def load_users():
+    try:
+        with open(USERS_FILE, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+
+def save_users(users_data):
+    with open(USERS_FILE, 'w') as file:
+        json.dump(users_data, file)
+
+# Load users from file
+users = load_users()
+# Define a dictionary of users (in a real application, you'd use a database)
+
 app = Flask(__name__, static_url_path='/static')
 # Set a secret key for the Flask application
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+# Define a dictionary to store admin users
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -30,7 +50,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Ensure the upload folder exists
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif','mp4','mp3'}
 
 
 
@@ -122,28 +142,60 @@ def get_response():
 def admin():
     return render_template('admin.html')
 
+
+@app.route('/create_admin_user', methods=['POST'])
+@login_required
+def create_admin_user():
+    new_username = request.form.get('new_username')
+    new_password = request.form.get('new_password')
+    # Check if username already exists
+    if new_username in users:
+        print('Username already exists', 'error')
+        return redirect(url_for('create_admin_user_page'))
+    
+    # Add new user to users dictionary
+    users[new_username] = new_password
+    # Save updated users to file
+    save_users(users)
+    print('New admin user created successfully', 'success')
+    return redirect(url_for('admin'))
+
+
+
+
+@app.route('/create_admin_user_page')
+@login_required
+def create_admin_user_page():
+    return render_template('create_admin_user.html')
+
+@app.route('/merit')
+def merit():
+    return render_template('merit.html')
+
 @app.route('/update_response', methods=['POST'])
 @login_required
 def update_responses():
     intents, _, _, _, _ = load_data_and_model()
     updated_intents = intents.copy()
-    for intent in updated_intents['intents']:
-        new_response = request.form.get(f'response_{intent["tag"]}')
-        if new_response:
-            intent['responses'] = [new_response]
 
-    # Check for file URL in the form data
-    file_url = request.form.get('file_url')
-    if file_url:
-        tag = request.form.get('tag')
-        for intent in updated_intents['intents']:
-            if intent['tag'] == tag:
-                intent['responses'].append(f'<embed src="{file_url}" style="width: 285px;height:450px;">')
+    for intent in updated_intents['intents']:
+        tag_name = request.form.get(f'tag_{intent["tag"]}')
+        if tag_name:
+            intent['tag'] = tag_name
+
+        updated_patterns = request.form.getlist(f'pattern_{intent["tag"]}[]')
+        if updated_patterns:  # Check if updated patterns exist
+            intent['patterns'] = updated_patterns
+
+        new_response = request.form.get(f'response_{intent["tag"]}')
+        if new_response is not None:  # Check if response field is not empty
+            intent['responses'] = [new_response]
 
     with open(DATASET_PATH, 'w') as json_data:
         json.dump(updated_intents, json_data, indent=4)
 
     return redirect(url_for('edit_responses'))
+
 
 # Add route to handle adding new intents
 @app.route('/add_intent', methods=['POST'])
@@ -229,8 +281,6 @@ def train_model_page():
         return render_template('train.html')
 
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -256,6 +306,10 @@ def upload_file():
             tag = f'<embed src="{file_url}" style="width: 285px;height:450px;"></embed>'
         elif mime_type.startswith('image'):
             tag = f'<img src="{file_url}" style="width: 285px;height:450px;">'
+        elif mime_type == 'audio/mpeg':
+            tag = f'<audio controls src="{file_url}" style="width: 285px;"></audio>'
+        elif mime_type == 'video/mp4':
+            tag = f'<video controls src="{file_url}" style="width: 285px;height:450px;"></video>'
         else:
             tag = f'Unsupported file format: {filename}'
         
@@ -284,10 +338,7 @@ def get_training_progress():
         abort(404)
 
 
-# Define a dictionary of users (in a real application, you'd use a database)
-users = {
-    'admin': '123'
-}
+
 
 # Function to check if a username and password are valid
 def is_valid_credentials(username, password):
