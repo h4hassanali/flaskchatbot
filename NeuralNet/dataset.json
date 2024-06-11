@@ -3,7 +3,7 @@
         {
             "tag": "admission_general",
             "patterns": [
-                "hanjuu",
+                "what is the procedure to apply for admission?",
                 "how to apply for admission?",
                 "How to get admission in",
                 "Where to get admission in",
@@ -25,10 +25,12 @@
                 "can I download the admission form online?",
                 "what is the link to the admission portal?",
                 "how to fill out the admission form?",
-                "what is the deadline to apply for admission?"
+                "what is the deadline to apply for admission?",
+                "How to apply",
+                "Admission"
             ],
             "responses": [
-                "<p> We only process online applications submitted through the online admission portal of Hazara University.<br><br>Link to the admission portal: <br><a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a> <br><br>Please read the prospectus of Hazara University for further insights to University's Environment. <br><embed src=\"/static/PDFs/Refund_Form.pdf\" style=\"width: 285px;height:450px;\"></embed></p>\r\nnewew\r\n<embed src=\"/static/uploads/Resume-Hassan-Ali_2.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+                "We only process admission applications submitted online. You can apply online for admission through the online admission portal of Hazara University Mansehra.<br> Here is the link to the admission portal: <a href=\"https://lms.hu.edu.pk/admissions/register\" style=\"color: white;\">Online Admission Portal</a> <br>\r\nTo have more view of University details Please view the prospectus:\r\n<embed src=\"/static/uploads/prospectus_dummy.pdf\" style=\"width: 285px;height:450px;\"></embed>"
             ],
             "context_set": ""
         },
@@ -57,20 +59,13 @@
                 "What additional documents are needed for international students?"
             ],
             "responses": [
-                "<p>Following documents are required when you will apply for BS/MS/Mphil and Phd Programmes :<br>1. Passport Sized Photo <br>2. DMCs/Academic transcripts of previous Education <br>3. National ID Card <br>4. Admission Fee Challan <br><br>For further info and details, please visit <a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a></p>"
+                "You'll need the following documents for admission application.\r\n<ul>\r\n    <li>Application form</li>\r\n    <li>Passport size Photo</li>\r\n    <li>Student CNIC</li>\r\n    <li>Father CNIC</li>\r\n    <li>Domicile</li>\r\n    <li>FSC DMC</li>\r\n    <li>Metric DMC</li>\r\n    <li>Admission Fee slip</li>\r\n</ul>\r\n\r\n"
             ],
             "context_set": ""
         },
         {
             "tag": "admission_opening_closing",
             "patterns": [
-                "In which departments admissions are open",
-                "In which programs admissions are open",
-                "Admissions are open",
-                "Departments where admissions are open",
-                "MS Admission Programmes",
-                "Phd Admission programmes",
-                "BS Admission programs",
                 "Are admssions open now?",
                 "When Masters admission will open?",
                 "Please tell me when admission will open",
@@ -90,7 +85,7 @@
                 "Admission Closing Date"
             ],
             "responses": [
-                "<p>Admission Details for different programs with last date is mentioned in the poster below : <br><br><br><img src=\"static/images/testadmission.png\" width=\"285\" height=\"230\"><br><br><br>For further info and details, please visit <a style=\"color: white;\" href=\"https://lms.hu.edu.pk/admissions/register\">Online Admission Portal</a></p>"
+                "Admissions for spring semester are usually open till December, and Admissions for Fall semester are usually open till August.<img src=\"/static/uploads/pic_1581083950.jpg\" style=\"width: 285px;height:450px;\">"
             ],
             "context_set": ""
         },
@@ -116,7 +111,7 @@
                 "How merit is calculated"
             ],
             "responses": [
-                "<p>Only 60 percent marks in FSc are required for admission</p>\r\n<h3>Please visit to Calculate merit for BS Level :</h3>\r\n<a style=\"color: white;\" href=\"http://127.0.0.1:5000/merit\" target=\"_blank\">Calculate BS Merit</a>\r\n"
+                "         <p>Only 60 percent marks in FSc are required for admission</p>\r\n\t\t\t\t <h1>Please visit to Calculate merit for BS Level :</h1>\r\n\t\t\t\t <a style=\"color: white;\" href=\"http://127.0.0.1:5000/merit\" target=\"_blank\">Calculate BS Merit</a>\r\n"
             ],
             "context_set": ""
         },
@@ -145,7 +140,7 @@
                 "What is the fee for the admission test?"
             ],
             "responses": [
-                "<p>Admission test is only for this this dept and this this program, in other depts we do merit calculation on basis of marks</p>"
+                "We have specific admission process for certain departments, such as Arts and Design, Architecture, and Law, which require an admission test. For other departments, admission is based on merit, which involve academic performance, previous qualifications. If you need further details or assistance with this process, feel free to conatct Student Service center."
             ],
             "context_set": ""
         },
@@ -170,12 +165,10 @@
                 "How do I pay the admission fee?",
                 "Is the admission fee different for different programs?",
                 "What is the fee waiver policy for admission?",
-                "Where can I find information about the admission fee?",
-                "What is application fee",
-                "How much application fee is there for BS"
+                "Where can I find information about the admission fee?"
             ],
             "responses": [
-                "<p>The application fee for apply in 3 programs is Rs: 3000 /- <br>Pay the fee challan in bank and Upload the scanned copy of paid challan in online admission portal , so that we can process your application.</p>"
+                "You will need to pay Rs. 3000 for 3 programs. Please generate your challan after flling application form on online portal. Pay it in bank mentioned on challan and then upload the image of paid challan on portal."
             ],
             "context_set": ""
         },
@@ -201,7 +194,1519 @@
                 "Where to get fee structure"
             ],
             "responses": [
-                "<p>Fee structure for different programs is here in this image, image abi tk ni mili humen</p>"
+                "There are different fee structure for different Bs programs for further detail of each program visit this link<a href=\"https://www.eduvision.edu.pk/hazara-university-hu-mansehra-ins-13\" style=\"color: white;\">Online Fee structure Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "scholarship_general ",
+            "patterns": [
+                "what is the procedure to apply for scholarship?",
+                "how to apply for scholarship?",
+                "How to get scholarship",
+                "Where to get scholarship",
+                "How to take scholarship",
+                "where to apply for scholarship?",
+                "tell me about scholarship?",
+                "scholarship",
+                "can I apply online for scholarship?",
+                "give me the scholarship form",
+                "where to apply for scholarship?",
+                "what are the steps to apply for scholarship?",
+                "how can I start the scholarship process?",
+                "where do I find the scholarship guidelines?",
+                "is there an online portal for scholarship?",
+                "how do I access the scholarship application?",
+                "where can I get the scholarship form?",
+                "what is the online application process for scholarship?",
+                "how do I apply for scholarship online?",
+                "can I download the scholarship form online?",
+                "what is the link to the scholarship portal?",
+                "how to fill out the scholarship form?",
+                "what is the deadline to apply for scholarship?"
+            ],
+            "responses": [
+                "We only process scholarship applications submitted online. You can apply online for scholarship through signing into your LMS Account and navigating to scholarships section. For Further Info Please visit Student Service Center / Scholarship office Hazara University Mansehra."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "scholarship_requirment",
+            "patterns": [
+                "What documents are required for scholarship?",
+                "scholarship Requirements",
+                "Things required for scholarship",
+                "What are the steps to apply for scholarship?",
+                "Is Fsc DMC required for scholarship?",
+                "My result is pending, can I apply for scholarship?",
+                "Which docs to upload on the online scholarship portal?",
+                "Which documents do I need for scholarship?",
+                "What are the academic requirements for scholarship?",
+                "Do I need a recommendation letter for scholarship?",
+                "Is a personal statement required for scholarship?",
+                "Are there any specific forms needed for scholarship?",
+                "Do I need to submit my ID card for scholarship?",
+                "Are passport,sized photos required for scholarship?",
+                "Do I need my birth certificate for scholarship?",
+                "What financial documents are required for scholarship?",
+                "Do I need to provide proof of residence for scholarship?",
+                "Are there any medical requirements for scholarship?"
+            ],
+            "responses": [
+                "Different doc req for scholarship"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Ehsaas_scholarship ",
+            "patterns": [
+                "What documents are required for ehsaas scholarship?",
+                "ehsaas scholarship Requirements doc?",
+                "Ehsaas scholarship",
+                "Ehsaas",
+                "ehsaas",
+                "ehsaas scholarship",
+                "ehsaas scholarship date",
+                "How to download ehsaas scholarship form",
+                "ehsaas scholarship form",
+                "last date of ehsaas scholarship",
+                "Things required for ehsaas scholarship?",
+                "What are the steps to apply for ehsaas scholarship?",
+                "Is Fsc DMC required for ehsaas scholarship?",
+                "My result is pending, can I apply for ehsaas scholarship?",
+                "Which docs to upload on the online ehsaas scholarship portal?",
+                "Which documents do I need for ehsaas scholarship?",
+                "What are the academic requirements for ehsaas scholarship?",
+                "Do I need a recommendation letter for ehsaas scholarship?",
+                "Is a personal statement required for ehsaas scholarship?",
+                "Are there any specific forms needed for ehsaas scholarship?",
+                "Do I need to submit my ID card for ehsaas scholarship?",
+                "Are passport,sized photos required for ehsaas scholarship?",
+                "Do I need my birth certificate for ehsaas scholarship?",
+                "What financial documents are required for ehsaas scholarship?",
+                "Do I need to provide proof of residence for ehsaas scholarship?",
+                "Are there any medical requirements for ehsaas scholarship?"
+            ],
+            "responses": [
+                "Different doc req for ehsaas scholarship. <br> Here is the link to the ehsaas scholarship portal: <a href=\"https://ehsaas.hec.gov.pk/#/login\" style=\"color: white;\">Online ehsaas scholarship Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "HEC_Need_Based_Scholarship",
+            "patterns": [
+                "What documents are required for HEC Need Based Scholarship?",
+                "HEC Need Based Scholarship Requirements doc?",
+                "HEC Need Based Scholarship",
+                "Need Based",
+                "need based",
+                "Need Based Scholarship",
+                "need based scholarship",
+                "Need Based Scholarship date",
+                "How to download Need based scholarship form",
+                "last date of Need Based Scholarship",
+                "need based scholarship form",
+                "Things required for HEC Need Based Scholarship?",
+                "What are the steps to apply for HEC Need Based Scholarship?",
+                "Is Fsc DMC required for HEC Need Based Scholarship?",
+                "My result is pending, can I apply for HEC Need Based Scholarship?",
+                "Which docs to upload on the online HEC Need Based Scholarship portal?",
+                "Which documents do I need for HEC Need Based Scholarship?",
+                "What are the academic requirements for HEC Need Based Scholarship?",
+                "Do I need a recommendation letter for HEC Need Based Scholarship?",
+                "Is a personal statement required for HEC Need Based Scholarship?",
+                "Are there any specific forms needed for HEC Need Based Scholarship?",
+                "Do I need to submit my ID card for HEC Need Based Scholarship?",
+                "Are passport,sized photos required for HEC Need Based Scholarship?",
+                "Do I need my birth certificate for HEC Need Based Scholarship?",
+                "What financial documents are required for HEC Need Based Scholarship?",
+                "Do I need to provide proof of residence for HEC Need Based Scholarship?",
+                "Are there any medical requirements for HEC Need Based Scholarship?"
+            ],
+            "responses": [
+                "Different doc req for HEC Need Based Scholarship. <br> Here is the link to the HEC Need Based Scholarship portal: <a href=\"https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/How-To-Apply.aspx\" style=\"color: white;\">Online HEC Need Based Scholarship Portal</a><br><embed src=\"/static/uploads/need_based_Scholarship_Application-Form.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Disable_Person_Scholarship",
+            "patterns": [
+                "What documents are required for Disable Person Scholarship?",
+                "Disable Person Scholarship Requirements doc?",
+                "Disable Person Scholarship",
+                "disable person",
+                "disable person scholarship date",
+                "last date for disable person scholarship",
+                "How to apply for disable person",
+                "Things required for HEC Disable Person Scholarship?",
+                "What are the steps to apply for Disable Person Scholarship?",
+                "Is Fsc DMC required for Disable Person Scholarship?",
+                "My result is pending, can I apply for Disable Person Scholarship?",
+                "Which docs to upload on the online Disable Person Scholarship portal?",
+                "Which documents do I need for Disable Person Scholarship?",
+                "What are the academic requirements for Disable Person Scholarship?",
+                "Do I need a recommendation letter for Disable Person Scholarship?",
+                "Is a personal statement required for Disable Person Scholarship?",
+                "Are there any specific forms needed for Disable Person Scholarship?",
+                "Do I need to submit my ID card for Disable Person Scholarship?",
+                "Are passport,sized photos required for Disable Person Scholarship?",
+                "Do I need my birth certificate for Disable Person Scholarship?",
+                "What financial documents are required for Disable Person Scholarship?",
+                "Do I need to provide proof of residence for Disable Person Scholarship?",
+                "Are there any medical requirements for Disable Person Scholarship?"
+            ],
+            "responses": [
+                "Different doc req for Disable Person Scholarship. <br> Here is the link to the Disable Person Scholarship portal: <a href=\"https://www.hec.gov.pk/english/HECAnnouncements/Pages/Disability-Quota.aspx\" style=\"color: white;\">Online Disable Person Scholarship Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "NEST_Scholarship",
+            "patterns": [
+                "What documents are required for NEST Scholarship?",
+                "NEST Scholarship Requirements doc?",
+                "nest scholarship form",
+                "nest scholarship",
+                "give me application form for nest scholarship",
+                "how to apply for nest scholarship?",
+                "how to download nest scholarship form",
+                "last date for nest scholarship",
+                "Things required for NEST Scholarship?",
+                "What are the steps to apply for NEST Scholarship?",
+                "Is Bacholer degree required for NEST Scholarship?",
+                "My degree is pending, can I apply for NEST Scholarship?",
+                "Which docs to upload on the online NEST Scholarship portal?",
+                "Which documents do I need for NEST Scholarship?",
+                "What are the academic requirements for NEST Scholarship?",
+                "Do I need a recommendation letter for NEST Scholarship?",
+                "Is a personal statement required for NEST Scholarship?",
+                "Are there any specific forms needed for NEST Scholarship?",
+                "Do I need to submit my ID card for NEST Scholarship?",
+                "Are passport,sized photos required for NEST Scholarship?",
+                "Do I need my birth certificate for NEST Scholarship?",
+                "What financial documents are required for NEST Scholarship?",
+                "Do I need to provide proof of residence for NEST Scholarship?",
+                "Are there any medical requirements for NEST Scholarship?"
+            ],
+            "responses": [
+                "Different doc req for NEST Scholarship. <br> Here is the link to the NEST Scholarship portal: <a href=\"https://scholarships.nest.org.pk/\" style=\"color: white;\">Online NEST Scholarship Portal</a><embed src=\"/static/uploads/Arts-Culture-Scholarship-Application-Form-NEST-1.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Frontier_Education_Foundation_Scholarship_FEF",
+            "patterns": [
+                "What documents are required for Frontier Education Foundation Scholarship FEF?",
+                "Frontier Education Foundation Scholarship FEF Requirements doc?",
+                "Frontier Education Foundation Scholarship",
+                "FEF scholarship",
+                "FEF",
+                "fef",
+                "Frontier Education Foundation Scholarship application form",
+                "How to download Frontier Education Foundation Scholarship form",
+                "Frontier Education Foundation Scholarship date",
+                "give me application form for Frontier Education Foundation Scholarship scholarship",
+                "Last date fo Frontier Education Foundation Scholarship",
+                "Frontier Education scholarship",
+                "How to apply for Frontier Education Foundation Scholarship",
+                "Things required for Frontier Education Foundation Scholarship FEF?",
+                "What are the steps to apply for Frontier Education Foundation Scholarship FEF?",
+                "Is Fsc DMC required for Frontier Education Foundation Scholarship FEF?",
+                "My result is pending, can I apply for Frontier Education Foundation Scholarship FEF?",
+                "Which docs to upload on the online Frontier Education Foundation Scholarship FEF portal?",
+                "Which documents do I need for Frontier Education Foundation Scholarship FEF?",
+                "What are the academic requirements for Frontier Education Foundation Scholarship FEF?",
+                "Do I need a recommendation letter for Frontier Education Foundation Scholarship FEF?",
+                "Is a personal statement required for Frontier Education Foundation Scholarship FEF?",
+                "Are there any specific forms needed for Frontier Education Foundation Scholarship FEF?",
+                "Do I need to submit my ID card for Frontier Education Foundation Scholarship FEF?",
+                "Are passport,sized photos required for Frontier Education Foundation Scholarship FEF?",
+                "Do I need my birth certificate for Frontier Education Foundation Scholarship FEF?",
+                "What financial documents are required for Frontier Education Foundation Scholarship FEF?",
+                "Do I need to provide proof of residence for Frontier Education Foundation Scholarship FEF?",
+                "Are there any medical requirements for Frontier Education Foundation Scholarship FEF?"
+            ],
+            "responses": [
+                "Different doc req for Frontier Education Foundation Scholarship. <br> Here is the link to the Frontier Education Foundation Scholarship portal: <a href=\"https://hed.gkp.pk/content/kp-ef\" style=\"color: white;\">Online Frontier Education Foundation Scholarship Portal</a><embed src=\"/static/uploads/Frontier-Education-Foundation-Scholarship-Application-Form-190417.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Punjab_Educational_Endowment_Fund_PEEF_scholarship ",
+            "patterns": [
+                "What documents are required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Punjab Educational Endowment Fund PEEF scholarship Requirements doc?",
+                "Things required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Punjab Educational Endowment Fund PEEF scholarship",
+                "Punjab Educational Endowment Fund PEEF scholarship application form",
+                "give me application form for Punjab Educational Endowment Fund scholarship",
+                "Punjab Educational scholarship",
+                "PEEF scholarship",
+                "PEEF",
+                "peef",
+                "How to download Punjab Educational Endowment Fund scholarship form",
+                "Punjab Educational Endowment Fund scholarship",
+                "How to apply for Punjab Educational Endowment Fund scholarship",
+                "last date of Punjab Educational Endowment Fund PEEF scholarship",
+                "Punjab Educational Endowment Fund PEEF scholarship date",
+                "What are the steps to apply for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Is Fsc DMC required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "My result is pending, can I apply for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Which docs to upload on the online Punjab Educational Endowment Fund PEEF scholarship portal?",
+                "Which documents do I need for Punjab Educational Endowment Fund PEEF scholarship?",
+                "What are the academic requirements for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Do I need a recommendation letter for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Is a personal statement required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Are there any specific forms needed for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Do I need to submit my ID card for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Are passport,sized photos required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Do I need my birth certificate for Punjab Educational Endowment Fund PEEF scholarship?",
+                "What financial documents are required for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Do I need to provide proof of residence for Punjab Educational Endowment Fund PEEF scholarship?",
+                "Are there any medical requirements for Punjab Educational Endowment Fund PEEF scholarship?"
+            ],
+            "responses": [
+                "Different doc req for Punjab Educational Endowment Fund PEEF scholarship. <br> Here is the link to the Punjab Educational Endowment Fund PEEF scholarship portal: <a href=\"https://www.peef.org.pk/peef-scholarships\" style=\"color: white;\">Online Punjab Educational Endowment Fund PEEF scholarship Portal</a><embed src=\"/static/uploads/PEEF_ScholarshipForm24.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "National_Bank_Loan_Scheme",
+            "patterns": [
+                "What documents are required for National Bank Loan Scheme?",
+                "National Bank Loan Scheme Requirements doc?",
+                "National Bank Loan",
+                "how to apply for National bank loan",
+                "National Bank Loan Scheme form",
+                "How to download National Bank Loan Scheme form",
+                "give me the information about National bank loan",
+                "Things required for National Bank Loan Scheme?",
+                "What are the steps to apply for National Bank Loan Scheme?",
+                "Is Fsc DMC required for National Bank Loan Scheme?",
+                "My result is pending, can I apply for National Bank Loan Scheme?",
+                "Which docs to upload on the online National Bank Loan Scheme portal?",
+                "Which documents do I need for National Bank Loan Scheme?",
+                "What are the academic requirements for National Bank Loan Scheme?",
+                "Do I need a recommendation letter for National Bank Loan Scheme?",
+                "Is a personal statement required for National Bank Loan Scheme?",
+                "Are there any specific forms needed for National Bank Loan Scheme?",
+                "Do I need to submit my ID card for National Bank Loan Scheme?",
+                "Are passport,sized photos required for National Bank Loan Scheme?",
+                "Do I need my birth certificate for National Bank Loan Scheme?",
+                "What financial documents are required for National Bank Loan Scheme?",
+                "Do I need to provide proof of residence for National Bank Loan Scheme?",
+                "Are there any medical requirements for National Bank Loan Scheme?"
+            ],
+            "responses": [
+                "Different doc req for National Bank Loan Scheme. <br> Here is the link to the National Bank Loan Scheme portal: <a href=\"https://www.nbp.com.pk/studentloan/\" style=\"color: white;\">Online National Bank Loan Scheme Portal</a><embed src=\"/static/uploads/National_Bank_loan_studentloandetails.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Diya_scholarship ",
+            "patterns": [
+                "What documents are required for Diya scholarship?",
+                "Diya scholarship Requirements doc?",
+                "Diya scholarship",
+                "diya scholarship",
+                "Diya scholarship form",
+                "How to download Diya scholarship form",
+                "Diya scholarship date",
+                "last date for Diya scholarship",
+                "Things required for Diya scholarship?",
+                "What are the steps to apply for Diya scholarship?",
+                "Is Fsc DMC required for Diya scholarship?",
+                "My result is pending, can I apply for Diya scholarship?",
+                "Which docs to upload on the online Diya scholarship portal?",
+                "Which documents do I need for Diya scholarship?",
+                "What are the academic requirements for Diya scholarship?",
+                "Do I need a recommendation letter for Diya scholarship?",
+                "Is a personal statement required for Diya scholarship?",
+                "Are there any specific forms needed for Diya scholarship?",
+                "Do I need to submit my ID card for Diya scholarship?",
+                "Are passport,sized photos required for Diya scholarship?",
+                "Do I need my birth certificate for Diya scholarship?",
+                "What financial documents are required for Diya scholarship?",
+                "Do I need to provide proof of residence for Diya scholarship?",
+                "Are there any medical requirements for Diya scholarship?"
+            ],
+            "responses": [
+                "Different doc req for Diya scholarship. <br> Here is the link to the Diya scholarship portal: <a href=\"https://diyapak.org/apply-scholarship/\" style=\"color: white;\">Online Diya scholarship Portal</a><embed src=\"/static/uploads/Diya_Scholarship_Attestation_Form_2024.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Political_Scholarship",
+            "patterns": [
+                "What documents are required for Political Scholarship from different political Agency (FATA)?",
+                "Political Scholarship from different political Agency (FATA) Requirements doc?",
+                "Political Scholarship",
+                "political scholarship",
+                "Political Scholarship form",
+                "how to download Political Scholarship form",
+                "Political Scholarship",
+                "FATA Scholarship",
+                "fata scholarship",
+                "How to apply for Political Scholarship",
+                "Political scholarship date",
+                "last date for political scholarship",
+                "Things required for Political Scholarship from different political Agency (FATA)?",
+                "What are the steps to apply for Political Scholarship from different political Agency (FATA)?",
+                "Is Fsc DMC required for Political Scholarship from different political Agency (FATA)?",
+                "My result is pending, can I apply for Political Scholarship from different political Agency (FATA)?",
+                "Which docs to upload on the online Political Scholarship from different political Agency (FATA) portal?",
+                "Which documents do I need for Political Scholarship from different political Agency (FATA)?",
+                "What are the academic requirements for Political Scholarship from different political Agency (FATA)?",
+                "Do I need a recommendation letter for Political Scholarship from different political Agency (FATA)?",
+                "Is a personal statement required for Political Scholarship from different political Agency (FATA)?",
+                "Are there any specific forms needed for Political Scholarship from different political Agency (FATA)?",
+                "Do I need to submit my ID card for Political Scholarship from different political Agency (FATA)?",
+                "Are passport,sized photos required for Political Scholarship from different political Agency (FATA)?",
+                "Do I need my birth certificate for Political Scholarship from different political Agency (FATA)?",
+                "What financial documents are required for Political Scholarship from different political Agency (FATA)?",
+                "Do I need to provide proof of residence for Political Scholarship from different political Agency (FATA)?",
+                "Are there any medical requirements for Political Scholarship from different political Agency (FATA)?"
+            ],
+            "responses": [
+                "Different doc req for Political Scholarship from different political Agency (FATA)."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Kapadia_Education_Foundation_scholarship ",
+            "patterns": [
+                "What documents are required for Kapadia Education Foundation scholarship?",
+                "Kapadia Education Foundation scholarship Requirements doc?",
+                "Kapadia Education Foundation scholarship ",
+                "kapadia education foundation scholarship ",
+                "Kapadia scholarship",
+                "Kapadia Education Foundation scholarship date ",
+                "last date of Kapadia Education Foundation scholarship",
+                "Things required for Kapadia Education Foundation scholarship?",
+                "What are the steps to apply for Kapadia Education Foundation scholarship?",
+                "Is Fsc DMC required for Kapadia Education Foundation scholarship?",
+                "My result is pending, can I apply for Kapadia Education Foundation scholarship?",
+                "Which docs to upload on the online Kapadia Education Foundation scholarship portal?",
+                "Which documents do I need for Kapadia Education Foundation scholarship?",
+                "What are the academic requirements for Kapadia Education Foundation scholarship?",
+                "Do I need a recommendation letter for Kapadia Education Foundation scholarship?",
+                "Is a personal statement required for Kapadia Education Foundation scholarship?",
+                "Are there any specific forms needed for Kapadia Education Foundation scholarship?",
+                "Do I need to submit my ID card for Kapadia Education Foundation scholarship?",
+                "Are passport,sized photos required for Kapadia Education Foundation scholarship?",
+                "Do I need my birth certificate for Kapadia Education Foundation scholarship?",
+                "What financial documents are required for Kapadia Education Foundation scholarship?",
+                "Do I need to provide proof of residence for Kapadia Education Foundation scholarship?",
+                "Are there any medical requirements for Kapadia Education Foundation scholarship?"
+            ],
+            "responses": [
+                "Different doc req for Kapadia Education Foundation scholarship. <br> Here is the link to the Kapadia Education Foundation scholarship portal: <a href=\"https://www.kapadiaef.org/scholarship-application\" style=\"color: white;\">Online Kapadia Education Foundation scholarship Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Prime_Minister_Fee_reimbursement_Scheme_PMFRS ",
+            "patterns": [
+                "What documents are required for Prime Minister Fee re imbursement Scheme PMFRS?",
+                "Prime Minister Fee re imbursement Scheme PMFRS Requirements doc?",
+                "Prime Minister Fee reimbursement",
+                "Prime Minister Fee reimbursement form",
+                "PMFRS Scheme",
+                "pmfrs",
+                "how to apply for Prime Minister Fee reimbursement scheme",
+                "how to download Prime Minister Fee reimbursement scheme form",
+                "Things required for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "What are the steps to apply for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Is Fsc DMC required for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "My result is pending, can I apply for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Which docs to upload on the online Prime Minister Fee reimbursement Scheme PMFRS portal?",
+                "Which documents do I need for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "What are the academic requirements for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Do I need a recommendation letter for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Is a personal statement required for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Are there any specific forms needed for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Do I need to submit my ID card for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Are passport,sized photos required for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Do I need my birth certificate for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "What financial documents are required for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Do I need to provide proof of residence for Prime Minister Fee reimbursement Scheme PMFRS?",
+                "Are there any medical requirements for Prime Minister Fee reimbursement Scheme PMFRS?"
+            ],
+            "responses": [
+                "Different doc req for Prime Minister Fee reimbursement Scheme PMFRS. <br> Here is the link to the Prime Minister Fee reimbursement Scheme PMFRS portal: <a href=\"https://www.hec.gov.pk/english/scholarshipsgrants/tfp/Pages/default.aspx\" style=\"color: white;\">Online Prime Minister Fee reimbursement Scheme PMFRS Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "bait_ul_mal_scholarship",
+            "patterns": [
+                "What documents are required for bait-ul-mal scholarship?",
+                "bait-ul-mal scholarship Requirements doc?",
+                "Things required for bait-ul-mal scholarship?",
+                "bait-ul-mal scholarship",
+                "bait ul mal scholarship",
+                "bait-ul-mal scholarship form",
+                "how to download bait-ul-mal scholarship form",
+                "how to download bait-ul-mal scholarship form",
+                "bait-ul-mal scholarship date",
+                "Last date of bait-ul-mal scholarship",
+                "What are the steps to apply for bait-ul-mal scholarship?",
+                "Is Fsc DMC required for bait-ul-mal scholarship?",
+                "My result is pending, can I apply for bait-ul-mal scholarship?",
+                "Which docs to upload on the online bait-ul-mal scholarship portal?",
+                "Which documents do I need for bait-ul-mal scholarship?",
+                "What are the academic requirements for bait-ul-mal scholarship?",
+                "Do I need a recommendation letter for bait-ul-mal scholarship?",
+                "Is a personal statement required for bait-ul-mal scholarship?",
+                "Are there any specific forms needed for bait-ul-mal scholarship?",
+                "Do I need to submit my ID card for bait-ul-mal scholarship?",
+                "Are passport,sized photos required for bait-ul-mal scholarship?",
+                "Do I need my birth certificate for bait-ul-mal scholarship?",
+                "What financial documents are required for bait-ul-mal scholarship?",
+                "Do I need to provide proof of residence for bait-ul-mal scholarship?",
+                "Are there any medical requirements for bait-ul-mal scholarship?"
+            ],
+            "responses": [
+                "Different doc req for bait-ul-mal scholarship. <br> Here is the link to the bait-ul-mal scholarship portal: <a href=\"https://pbm.gov.pk/applyonline.html\" style=\"color: white;\">Online bait-ul-mal scholarship Portal</a><embed src=\"/static/uploads/bait-ul-mal_scholarship_form.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "University_Merit_based_scholarship",
+            "patterns": [
+                "What documents are required for University Merit based scholarship?",
+                "University Merit based scholarship Requirements doc?",
+                "University Merit based scholarship?",
+                "Hazara University Merit based scholarship?",
+                "Merit based scholarship?",
+                "Merit scholarship",
+                "University Merit based scholarship link?",
+                "how to apply for University Merit based scholarship?",
+                "University Merit based scholarship date?",
+                "last date University Merit based scholarship?",
+                "Things required for University Merit based scholarship?",
+                "What are the steps to apply for University Merit based scholarship?",
+                "Is Fsc DMC required for University Merit based scholarship?",
+                "My result is pending, can I apply for University Merit based scholarship?",
+                "Which docs to upload on the online University Merit based scholarship portal?",
+                "Which documents do I need for University Merit based scholarship?",
+                "What are the academic requirements for University Merit based scholarship?",
+                "Do I need a recommendation letter for University Merit based scholarship?",
+                "Is a personal statement required for University Merit based scholarship?",
+                "Are there any specific forms needed for University Merit based scholarship?",
+                "Do I need to submit my ID card for University Merit based scholarship?",
+                "Are passport,sized photos required for University Merit based scholarship?",
+                "Do I need my birth certificate for University Merit based scholarship?",
+                "What financial documents are required for University Merit based scholarship?",
+                "Do I need to provide proof of residence for University Merit based scholarship?",
+                "Are there any medical requirements for University Merit based scholarship?"
+            ],
+            "responses": [
+                "Different doc req for University Merit based scholarship."
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "scholarships_for_international_students",
+            "patterns": [
+                "What documents are required for international students?",
+                "for international students Requirements doc?",
+                "international student",
+                "Things required for for international students?",
+                "What are the academic requirements for international students?",
+                "Do I need a recommendation letter for international students?",
+                "Is a personal statement required for international students?",
+                "Are there any specific forms needed for international students?",
+                "Are passport,sized photos required for international students?",
+                "What financial documents are required for international students",
+                "Do I need to provide proof of residence for international students?",
+                "Are there any medical requirements for international students?"
+            ],
+            "responses": [
+                "Different doc req for international students"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Education_Future_International_Scholarship_USA",
+            "patterns": [
+                "What documents are required for Education Future International Scholarship - USA & Non-USA?",
+                "Education Future International Scholarship - USA & Non-USA Requirements doc?",
+                "Education Future International Scholarship",
+                "Education Future International Scholarship date",
+                "Education Future International Scholarship link",
+                "last date of Education Future International Scholarship",
+                "Education International Scholarship",
+                "Education Future International",
+                "How to apply for Education Future International Scholarship",
+                "Things required for Education Future International Scholarship - USA & Non-USA?",
+                "What are the steps to apply for Education Future International Scholarship - USA & Non-USA?",
+                "Is Fsc DMC required for Education Future International Scholarship - USA & Non-USA?",
+                "My result is pending, can I apply for Education Future International Scholarship - USA & Non-USA?",
+                "Which docs to upload on the online Education Future International Scholarship - USA & Non-USA?",
+                "Which documents do I need for Education Future International Scholarship - USA & Non-USA?",
+                "What are the academic requirements for Education Future International Scholarship - USA & Non-USA?",
+                "Do I need a recommendation letter for Education Future International Scholarship - USA & Non-USA?",
+                "Is a personal statement required for Education Future International Scholarship - USA & Non-USA?",
+                "Are there any specific forms needed for Education Future International Scholarship - USA & Non-USA?",
+                "Do I need to submit my ID card for Education Future International Scholarship - USA & Non-USA?",
+                "Are passport,sized photos required for Education Future International Scholarship - USA & Non-USA?",
+                "Do I need my birth certificate for Education Future International Scholarship - USA & Non-USA?",
+                "What financial documents are required for Education Future International Scholarship - USA & Non-USA?",
+                "Do I need to provide proof of residence for Education Future International Scholarship - USA & Non-USA?",
+                "Are there any medical requirements for Education Future International Scholarship - USA & Non-USA?"
+            ],
+            "responses": [
+                "Different doc req for Education Future International Scholarship - USA. <br> Here is the link to the Education Future International Scholarship - USA: <a href=\"https://www.wemakescholars.com/scholarship/education-future-international-scholarship\" style=\"color: white;\">Online Education Future International Scholarship - USA Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "TWAS_ICCBS_Postgraduate_Fellowship_Program",
+            "patterns": [
+                "What documents are required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "TWAS, ICCBS Postgraduate Fellowship Program Requirements doc?",
+                "TWAS, ICCBS Postgraduate Fellowship?",
+                "TWAS, ICCBS Postgraduate?",
+                "TWAS, ICCBS",
+                "ICCBS",
+                "TWAS, ICCBS Postgraduate Fellowship Program link?",
+                "TWAS, ICCBS Postgraduate Fellowship Program date",
+                "Last date of TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Things required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "how to apply fpr TWAS, ICCBS Postgraduate Fellowship?",
+                "What are the steps to apply for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Is Fsc DMC required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "My result is pending, can I apply for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Which docs to upload on the online TWAS, ICCBS Postgraduate Fellowship Program portal?",
+                "Which documents do I need for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "What are the academic requirements for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Do I need a recommendation letter for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Is a personal statement required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Are there any specific forms needed for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Do I need to submit my ID card for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Are passport,sized photos required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Do I need my birth certificate for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "What financial documents are required for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Do I need to provide proof of residence for TWAS, ICCBS Postgraduate Fellowship Program?",
+                "Are there any medical requirements for TWAS, ICCBS Postgraduate Fellowship Program?"
+            ],
+            "responses": [
+                "Different doc req for TWAS, ICCBS Postgraduate Fellowship Program. <br> Here is the link to the TWAS, ICCBS Postgraduate Fellowship Program portal: <a href=\"https://www.wemakescholars.com/scholarship/twas-iccbs-postgraduate-fellowship-programme\" style=\"color: white;\">Online TWAS, ICCBS Postgraduate Fellowship Program Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "TWAS_NCP_Postdoctoral_Fellowship_Programme",
+            "patterns": [
+                "What documents are required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "TWAS, NCP Postdoctoral Fellowship Programme Requirements doc?",
+                "TWAS, NCP Postdoctoral Fellowship Programme?",
+                "TWAS, NCP Postdoctoral Fellowship Programme date?",
+                "TWAS, NCP Postdoctoral Fellowship Programme link?",
+                "last date of TWAS, NCP Postdoctoral Fellowship Programme?",
+                "TWAS, NCP Postdoctoral?",
+                "TWAS, NCP?",
+                "NCP",
+                "how to apply for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Things required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "What are the steps to apply for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Is Fsc DMC required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "My result is pending, can I apply for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Which docs to upload on the online TWAS, NCP Postdoctoral Fellowship Programme portal?",
+                "Which documents do I need for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "What are the academic requirements for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Do I need a recommendation letter for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Is a personal statement required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Are there any specific forms needed for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Do I need to submit my ID card for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Are passport,sized photos required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Do I need my birth certificate for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "What financial documents are required for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Do I need to provide proof of residence for TWAS, NCP Postdoctoral Fellowship Programme?",
+                "Are there any medical requirements for TWAS, NCP Postdoctoral Fellowship Programme?"
+            ],
+            "responses": [
+                "Different doc req for TWAS, NCP Postdoctoral Fellowship Programme. <br> Here is the link to the TWAS, NCP Postdoctoral Fellowship Programme portal: <a href=\"https://www.wemakescholars.com/scholarship/twas-ncp-postdoctoral-fellowship-programme\" style=\"color: white;\">Online TWAS, NCP Postdoctoral Fellowship Programme Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Abel_Visiting_Scholar_Program",
+            "patterns": [
+                "What documents are required for Abel Visiting Scholar Program ?",
+                "Abel Visiting Scholar Program Requirements doc?",
+                "Abel Visiting Scholar?",
+                "Abel Visiting?",
+                "Abel Visiting Scholar Program link?",
+                "Abel Visiting Scholar Program date?",
+                "last date of Abel Visiting Scholar Program?",
+                "how to apply for Abel Visiting Scholar Program?",
+                "Abel",
+                "Abel Visiting Scholar Program form?",
+                "Things required for Abel Visiting Scholar Program?",
+                "What are the steps to apply for Abel Visiting Scholar Program?",
+                "Is Fsc DMC required for Abel Visiting Scholar Program?",
+                "My result is pending, can I apply for Abel Visiting Scholar Program?",
+                "Which docs to upload on the online Abel Visiting Scholar Program?",
+                "Which documents do I need for Abel Visiting Scholar Program?",
+                "What are the academic requirements for Abel Visiting Scholar Program?",
+                "Do I need a recommendation letter for Abel Visiting Scholar Program?",
+                "Is a personal statement required for Abel Visiting Scholar Program?",
+                "Are there any specific forms needed for Abel Visiting Scholar Program?",
+                "Do I need to submit my ID card for Abel Visiting Scholar Program?",
+                "Are passport,sized photos required for Abel Visiting Scholar Program?",
+                "Do I need my birth certificate for Abel Visiting Scholar Program?",
+                "What financial documents are required for Abel Visiting Scholar Program?",
+                "Do I need to provide proof of residence for Abel Visiting Scholar Program?",
+                "Are there any medical requirements for Abel Visiting Scholar Program?"
+            ],
+            "responses": [
+                "Different doc req for Abel Visiting Scholar Program. <br> Here is the link to the Abel Visiting Scholar Program portal: <a href=\"https://www.wemakescholars.com/scholarship/abel-visiting-scholar-program\" style=\"color: white;\">Online Abel Visiting Scholar Program Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Leakey_Foundation_Research_Grants ",
+            "patterns": [
+                "What documents are required for Leakey Foundation Research Grants?",
+                "Leakey Foundation Research Grants Requirements doc?",
+                "Leakey Foundation Research Grants?",
+                "Leakey Foundation Research?",
+                "Leakey Foundation?",
+                "Leakey",
+                "Leakey Foundation Research Grants link?",
+                "Leakey Foundation Research Grants form?",
+                "Leakey Foundation Research Grants date?",
+                "last date of Leakey Foundation Research Grants?",
+                "how to apply for Leakey Foundation Research Grants?",
+                "Things required for Leakey Foundation Research Grants?",
+                "What are the steps to apply for Leakey Foundation Research Grants?",
+                "Is Fsc DMC required for Leakey Foundation Research Grants?",
+                "My result is pending, can I apply for Leakey Foundation Research Grants?",
+                "Which docs to upload on the online Leakey Foundation Research Grants?",
+                "Which documents do I need for Leakey Foundation Research Grants?",
+                "What are the academic requirements for Leakey Foundation Research Grants?",
+                "Do I need a recommendation letter for Leakey Foundation Research Grants?",
+                "Is a personal statement required for Leakey Foundation Research Grants?",
+                "Are there any specific forms needed for Leakey Foundation Research Grants?",
+                "Do I need to submit my ID card for Leakey Foundation Research Grants?",
+                "Are passport,sized photos required for Leakey Foundation Research Grants?",
+                "Do I need my birth certificate for Leakey Foundation Research Grants?",
+                "What financial documents are required for Leakey Foundation Research Grants?",
+                "Do I need to provide proof of residence for Leakey Foundation Research Grants?",
+                "Are there any medical requirements for Leakey Foundation Research Grants?"
+            ],
+            "responses": [
+                "Different doc req for Leakey Foundation Research Grants. <br> Here is the link to the Leakey Foundation Research Grants portal: <a href=\"https://www.wemakescholars.com/scholarship/leakey-foundation-research-grants\" style=\"color: white;\">Online Leakey Foundation Research Grants Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Marie_Sklodowska_Curie_Actions_Postdoctoral_Fellowships",
+            "patterns": [
+                "What documents are required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Marie Sklodowska-Curie Actions Postdoctoral Fellowships Requirements doc?",
+                "Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Marie Sklodowska-Curie Actions",
+                "Marie Sklodowska-Curie",
+                "Marie Sklodowska",
+                "Marie",
+                "Marie Sklodowska-Curie Actions Postdoctoral Fellowships link?",
+                "Marie Sklodowska-Curie Actions Postdoctoral Fellowships form?",
+                "Marie Sklodowska-Curie Actions Postdoctoral Fellowships date?",
+                "how to apply for Marie Sklodowska-Curie Actions Postdoctoral Fellowships ?",
+                "Things required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "What are the steps to apply for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Is Fsc DMC required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "My result is pending, can I apply for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Which docs to upload on the online Marie Sklodowska-Curie Actions Postdoctoral Fellowships portal?",
+                "Which documents do I need for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "What are the academic requirements for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Do I need a recommendation letter for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Is a personal statement required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Are there any specific forms needed for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Do I need to submit my ID card for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Are passport,sized photos required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Do I need my birth certificate for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "What financial documents are required for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Do I need to provide proof of residence for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?",
+                "Are there any medical requirements for Marie Sklodowska-Curie Actions Postdoctoral Fellowships?"
+            ],
+            "responses": [
+                "Different doc req for Marie Sklodowska-Curie Actions Postdoctoral Fellowships. <br> Here is the link to the Marie Sklodowska-Curie Actions Postdoctoral Fellowships portal: <a href=\"https://www.wemakescholars.com/scholarship/marie-skodowskacurie-actions-postdoctoral-fellowships\" style=\"color: white;\">Online Marie Sklodowska-Curie Actions Postdoctoral Fellowships Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Howard_G_Buffett_Fund_For_Women_Journalists",
+            "patterns": [
+                "What documents are required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Howard G. Buffett Fund For Women Journalists (FWJ) scholarship Requirements doc?",
+                "Howard G. Buffett Fund For Women Journalists (FWJ) scholarship",
+                "Howard G. Buffett",
+                "FWJ scholarship",
+                "Howard G. Buffett Fund For Women Journalists (FWJ) scholarship date",
+                "Howard G. Buffett Fund For Women Journalists (FWJ) scholarship link",
+                "Howard G. Buffett Fund For Women Journalists (FWJ) scholarship form",
+                "last date of Howard G. Buffett Fund For Women Journalists (FWJ) scholarship",
+                "how to apply for Howard G. Buffett Fund For Women Journalists (FWJ) scholarship",
+                "Things required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "What are the steps to apply for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Is Fsc DMC required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "My result is pending, can I apply for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Which docs to upload on the online Howard G. Buffett Fund For Women Journalists (FWJ) portal?",
+                "Which documents do I need for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "What are the academic requirements for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Do I need a recommendation letter for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Is a personal statement required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Are there any specific forms needed for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Do I need to submit my ID card for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Are passport,sized photos required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Do I need my birth certificate for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "What financial documents are required for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Do I need to provide proof of residence for Howard G. Buffett Fund For Women Journalists (FWJ)?",
+                "Are there any medical requirements for Howard G. Buffett Fund For Women Journalists (FWJ)?"
+            ],
+            "responses": [
+                "Different doc req for Howard G. Buffett Fund For Women Journalists (FWJ). <br> Here is the link to the Howard G. Buffett Fund For Women Journalists (FWJ) portal: <a href=\"https://www.wemakescholars.com/scholarship/howard-g-buffett-fund-for-women-journalists-fwj\" style=\"color: white;\">Online Howard G. Buffett Fund For Women Journalists (FWJ) Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Wellcome_Career_Development_Awards",
+            "patterns": [
+                "What documents are required for Wellcome Career Development Awards?",
+                "Wellcome Career Development Awards Requirements doc?",
+                "Wellcome Career Development Awards",
+                "Wellcome Career Development Awards link",
+                "Wellcome Career Development Awards form",
+                "Wellcome Career Development Awards date",
+                "last date of Wellcome Career Development Awards",
+                "how to apply for Wellcome Career Development Awards",
+                "Wellcome Career",
+                "Things required for Wellcome Career Development Awards?",
+                "What are the steps to apply for Wellcome Career Development Awards?",
+                "Is Fsc DMC required for Wellcome Career Development Awards?",
+                "My result is pending, can I apply for Wellcome Career Development Awards?",
+                "Which docs to upload on the online Wellcome Career Development Awards portal?",
+                "Which documents do I need for Wellcome Career Development Awards?",
+                "What are the academic requirements for Wellcome Career Development Awards?",
+                "Do I need a recommendation letter for Wellcome Career Development Awards?",
+                "Is a personal statement required for Wellcome Career Development Awards?",
+                "Are there any specific forms needed for Wellcome Career Development Awards?",
+                "Do I need to submit my ID card for Wellcome Career Development Awards?",
+                "Are passport,sized photos required for Wellcome Career Development Awards?",
+                "Do I need my birth certificate for Wellcome Career Development Awards?",
+                "What financial documents are required for Wellcome Career Development Awards?",
+                "Do I need to provide proof of residence for Wellcome Career Development Awards?",
+                "Are there any medical requirements for Wellcome Career Development Awards?"
+            ],
+            "responses": [
+                "Different doc req for Wellcome Career Development Awards. <br> Here is the link to the Wellcome Career Development Awards portal: <a href=\"https://www.wemakescholars.com/scholarship/wellcome-career-development-awards\" style=\"color: white;\">Online Wellcome Career Development Awards Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Royal_Society_International_Exchange_Programme",
+            "patterns": [
+                "What documents are required for Royal Society International Exchange Programme?",
+                "Royal Society International Exchange Programme Requirements doc?",
+                "Royal Society International Exchange Programme",
+                "Royal Society International",
+                "Royal Society",
+                "Royal Society International Exchange Programme link",
+                "Royal Society International Exchange Programme date",
+                "Royal Society International Exchange Programme form",
+                "last date of Royal Society International Exchange Programme",
+                "how to apply for Royal Society International Exchange Programme",
+                "Royal Society International Exchange Programme",
+                "Things required for Royal Society International Exchange Programme?",
+                "What are the steps to apply for Royal Society International Exchange Programme?",
+                "Is Fsc DMC required for Royal Society International Exchange Programme?",
+                "My result is pending, can I apply for Royal Society International Exchange Programme?",
+                "Which docs to upload on the online Royal Society International Exchange Programme portal?",
+                "Which documents do I need for Royal Society International Exchange Programme?",
+                "What are the academic requirements for Royal Society International Exchange Programme?",
+                "Do I need a recommendation letter for Royal Society International Exchange Programme?",
+                "Is a personal statement required for Royal Society International Exchange Programme?",
+                "Are there any specific forms needed for Royal Society International Exchange Programme?",
+                "Do I need to submit my ID card for Royal Society International Exchange Programme?",
+                "Are passport,sized photos required for Royal Society International Exchange Programme?",
+                "Do I need my birth certificate for Royal Society International Exchange Programme?",
+                "What financial documents are required for Royal Society International Exchange Programme?",
+                "Do I need to provide proof of residence for Royal Society International Exchange Programme?",
+                "Are there any medical requirements for Royal Society International Exchange Programme?"
+            ],
+            "responses": [
+                "Different doc req for Royal Society International Exchange Programme. <br> Here is the link to the Royal Society International Exchange Programme portal: <a href=\"https://www.wemakescholars.com/scholarship/royal-society-exchange-programme\" style=\"color: white;\">Online Royal Society International Exchange Programme Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Ramboll_Scholarships",
+            "patterns": [
+                "What documents are required for Ramboll Scholarships?",
+                "Ramboll scholarship Requirements doc?",
+                "Ramboll scholarship",
+                "ramboll scholarship",
+                "Ramboll",
+                "Ramboll scholarship link",
+                "Ramboll scholarship form",
+                "Ramboll scholarship date",
+                "last date of Ramboll scholarship",
+                "how to apply for Ramboll scholarship",
+                "Things required for Ramboll scholarship?",
+                "What are the steps to apply for Ramboll scholarship?",
+                "Is Fsc DMC required for Ramboll scholarship?",
+                "My result is pending, can I apply for Ramboll scholarship?",
+                "Which docs to upload on the online Ramboll scholarship portal?",
+                "Which documents do I need for Ramboll scholarship?",
+                "What are the academic requirements for Ramboll scholarship?",
+                "Do I need a recommendation letter for Ramboll scholarship?",
+                "Is a personal statement required for Ramboll scholarship?",
+                "Are there any specific forms needed for Ramboll scholarship?",
+                "Do I need to submit my ID card for Ramboll scholarship?",
+                "Are passport,sized photos required for Ramboll scholarship?",
+                "Do I need my birth certificate for Ramboll scholarship?",
+                "What financial documents are required for Ramboll scholarship?",
+                "Do I need to provide proof of residence for Ramboll scholarship?",
+                "Are there any medical requirements for Ramboll scholarship?"
+            ],
+            "responses": [
+                "Different doc req for Ramboll scholarship. <br> Here is the link to the Ramboll scholarship portal: <a href=\"https://www.wemakescholars.com/scholarship/ramboll-scholarship\" style=\"color: white;\">Online Ramboll scholarship Portal</a>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "University_Library",
+            "patterns": [
+                "What are the library hours during the academic year and summer sessions?",
+                "How can students borrow and return books?",
+                "Are there any late fees for overdue books?",
+                "How can I access online journals and e-books through the library?",
+                "What are the procedures for accessing special collections and archives?",
+                "Library",
+                "University Library",
+                "university library",
+                "What are the time of Uni library?",
+                "How can I get help with research or finding specific resources?",
+                "What amenities are available in the library, such as printers, scanners, and computers?",
+                "Can alumni use the library's resources and facilities?",
+                "Are there quiet study areas and group study areas in the library?",
+                "How do I get a library card or activate my student ID for library access?",
+                "What are the policies for food and drink in the library?",
+                "Does the library provide access to newspapers and magazines?"
+            ],
+            "responses": [
+                "**Hazara University Central Library** extends several valuable services to support your academic needs, including remote access via our website, research assistance, interlibrary loan requests, and technology lending. Our library's operating hours are from **9:00 AM to 4:00 PM** during the university term. For further details, please refer to the Central Library form provided below.\r\n\r\n<embed src=\"/static/uploads/Central_Library_Form.pdf\" style=\"width: 285px; height: 450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Library_Services",
+            "patterns": [
+                "How do I use the library's self-checkout system?",
+                "What support does the library offer for academic writing?",
+                "How can I access past exam papers or thesis documents?",
+                "What are the steps to reserve a study carrel or private study room?",
+                "Does the library provide services for accessing and using government documents?",
+                "How can I find and use the library's special collections?",
+                "How can I get help with using the library's catalog system?",
+                "How do I access the library's streaming video and audio collections?",
+                "What are the services available for students with disabilities?",
+                "What online services are available for alumni?",
+                "What are the guidelines for using the library's group study rooms?"
+            ],
+            "responses": [
+                "**Hazara University Central Library** extends several valuable services to support your academic needs, including remote access via our website, research assistance, interlibrary loan requests, and technology lending. Our library's operating hours are from **9:00 AM to 4:00 PM** during the university term. For further details, please refer to the Central Library form provided below.\r\n\r\n<embed src=\"/static/uploads/Central_Library_Form.pdf\" style=\"width: 285px; height: 450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Book_Borrowing",
+            "patterns": [
+                "What is the maximum number of books I can borrow at one time?",
+                "Are there any restrictions on borrowing new releases or reference books?",
+                "How long can I keep borrowed books before they are due?",
+                "Is there a limit on how many times I can renew a borrowed book?",
+                "What are the consequences for returning books late?",
+                "borrowed books",
+                "Borrowed Books",
+                "borrowed books card",
+                "Can I return borrowed books to any library branch?",
+                "Are there any fines for damaged or lost books?",
+                "what are the procedures of Book Borrowing",
+                "How can I check my current borrowed items and due dates online?",
+                "What online services are available for alumni?",
+                "Are there any restrictions on borrowing materials for non-students, such as alumni or community members?",
+                "How do I request a book that is currently checked out by another borrower?",
+                "Does the library offer a grace period for returning books after the due date?"
+            ],
+            "responses": [
+                "The library offers patrons to borrow books from the library's collection for a set period, promoting access to literature and knowledge.:<embed src=\"/static/uploads/Borrower_card_.pdf\" style=\"width: 285px;height:450px;\"></embed>"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Univeristy_Laboratories",
+            "patterns": [
+                "How can students access the university laboratories?",
+                "What are the main types of experiments conducted in the laboratories?",
+                "Can students use the laboratories outside of class hours?",
+                "Are there any safety rules students should know before entering the laboratories?",
+                "How can students find out about the equipment available in the laboratories?",
+                "Are there any opportunities for students to participate in research projects in the laboratories?",
+                "Can students borrow equipment from the laboratories for their own experiments?",
+                "What are the general guidelines for maintaining cleanliness in the laboratories?",
+                "Are there any special procedures for disposing of waste materials from experiments?",
+                "How can students report any issues or concerns they have while using the laboratories?"
+            ],
+            "responses": [
+                "Univeristy Laboratories are essential spaces where students can conduct experiments, research, and practical learning activities under the guidance of faculty members to enhance their understanding of scientific concepts and theories.:"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Univeristy_Computer_Labs",
+            "patterns": [
+                "What are the operating hours for the computer labs?",
+                "How can I find out if a computer lab is currently available?",
+                "Are there any 24/7 computer labs on campus?",
+                "How do I book a computer lab for a group study session or project?",
+                "Who do I contact if I have technical issues in a computer lab?",
+                "Is there on-site technical support available in the computer labs?",
+                "Can I get help with installing software for my classes in the computer labs?",
+                "What are the rules and regulations for using the computer labs?",
+                "Can I bring my own device and connect it to the lab's network?",
+                "Is food or drink allowed in the computer labs?"
+            ],
+            "responses": [
+                "The computer labs are generally open from 8:30 AM to 05:30 PM, Monday through Friday.:"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Univeristy_Sports_Facilities",
+            "patterns": [
+                "What are the operating hours for the sports facilities?",
+                "How can I check the availability of the gym or sports courts?",
+                "What sports facilities are available on campus?",
+                "Is there a membership fee to use the sports facilities?",
+                "Can alumni or family members of students use the sports facilities?",
+                "What is the process to sign up for a gym membership?",
+                "What are the rules for using the sports facilities?",
+                "Can I bring a guest to use the sports facilities?",
+                "Are there any restrictions on the type of equipment or attire allowed in the gym?",
+                "Are personal trainers available at the gym?",
+                "What upcoming sports events or competitions are scheduled on campus?",
+                "How can I participate in or attend university sports events?",
+                "Does the university host any intercollegiate sports competitions?",
+                "how to be in cricket team",
+                "cricket",
+                "how to be in football team",
+                "football",
+                "hockey",
+                "gym",
+                "I want to play hockey",
+                "University hockey team",
+                "when university gym opens",
+                "University cricket team",
+                "University football team"
+            ],
+            "responses": [
+                "The sports facilities are open from 08:00 AM to 10:00 PM,Monday through Friday.:"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Univeristy_Student_IDs_card",
+            "patterns": [
+                "What is the process for obtaining a student ID card?",
+                "student id card?",
+                "University card?",
+                "What information is included on a student ID card?",
+                "How can a student replace a lost or stolen ID card?",
+                "What are the benefits of having a university student ID card?",
+                "What are the rules for using the sports facilities?",
+                "Is a student ID card required to enter the university campus?",
+                "Are students allowed on campus without their student ID card?",
+                "How long does it take to get a student ID card after enrolling?",
+                "What should a student do if their ID card is damaged?",
+                "Are there any fees associated with getting or replacing a student ID card?",
+                "How does the university ensure the security of student ID cards?"
+            ],
+            "responses": [
+                "To Contact SCC Center of Hazara University<br> Here is the link to the SCC portal: <a href=\"https://hu.edu.pk/office-resource/82\" style=\"color: white;\">Online SCC Portal</a> "
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Univeristy_Transport",
+            "patterns": [
+                "What transport options are available for students on campus?",
+                "Transport?",
+                "Transport process?",
+                "Transport form?",
+                "What transport services are available?",
+                "What is the process for using campus transport?",
+                "How do students apply for a transport pass?",
+                "How can students reserve a seat on the university bus?",
+                "What are the costs associated with using university transport?",
+                "How can students access real-time updates on bus and shuttle schedules?",
+                "Can students use university transport services on weekends and holidays?",
+                "What steps should students take if their bus or shuttle is running late?"
+            ],
+            "responses": [
+                "To Contact Transport office of Hazara University<br> Here is the link to the Transport portal: <a href=\"https://hu.edu.pk/office/staff-members/49\" style=\"color: white;\">Online SCC Portal</a> "
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Archaeology",
+            "patterns": [
+                "who is the HOD of department of archaeology?",
+                "department of archaeology?",
+                "archaeology?",
+                "dept of archaeology?",
+                "what is the name of hod of department of archaeology?",
+                "How do I apply to the Department of Archaeology?",
+                "Is there an entrance exam for the archaeology program?",
+                "What GPA do I need to get into the archaeology program?",
+                "When is the application deadline for the archaeology program?",
+                "Do you offer scholarships for archaeology students?",
+                "Can I transfer credits from another university to the archaeology program?",
+                "Is there an interview process for admission to the archaeology program?",
+                "How many students are admitted to the archaeology program each year?",
+                "What are the tuition fees for the archaeology program?",
+                "Are there internship opportunities available through the Department of Archaeology?"
+            ],
+            "responses": [
+                "Dr. Shakirullah is the Head of the Department.The Department of Archaeology was established in August 2008 under the umbrella of the School of Cultural Heritage and Creative Technologies at Hazara University, Mansehra.<br> Here is the link to the Department of Archaeologyt portal: <a href=\"https://www.hu.edu.pk/departmental-data/20\" style=\"color: white;\">Online Department of Archaeology Portal</a> <img src=\"/static/uploads/profile_63561f2eebe513.52789976.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Architecture",
+            "patterns": [
+                "who is the HOD of department of Architecture?",
+                "department of Architecture?",
+                "Architecture?",
+                "dept of Architecture?",
+                "what is the name of hod of department of Architecture?",
+                "How do I apply to the Department of Architecture?",
+                "Is there an entrance exam for the Architecture program?",
+                "What GPA do I need to get into the Architecture program?",
+                "When is the application deadline for the Architecture program?",
+                "Do you offer scholarships for Architecture students?",
+                "Can I transfer credits from another university to the Architecture program?",
+                "Is there an interview process for admission to the Architecture program?",
+                "How many students are admitted to the Architecture program each year?",
+                "What are the tuition fees for the Architecture program?",
+                "Are there internship opportunities available through the Department of Architecture?"
+            ],
+            "responses": [
+                "Mr. Adnan Anwar is the Head of the Department.Architecture is a multi-disciplinary profession which emerged with state of the art technology in fast growing construction industry incorporating creativity, conceptualization and finalization at three levels of learning comprising of foundation, the intermediate and final stages from inception to conception and then to execution. Department of Architecture was established in Hazara University at garden campus in 2010. .<br> Here is the link to the Department of Architecture portal: <a href=\"https://www.hu.edu.pk/departmental-data/18\" style=\"color: white;\">Online Department of Architecture Portal</a> <img src=\"/static/uploads/profile_63562450b2f184.70425499.jpeg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Art_And_Design",
+            "patterns": [
+                "art and design",
+                "design",
+                "art",
+                "Who is the head of the Department of Art and Design?",
+                "What is the history of art and design?",
+                "How many courses can we study in art and design?",
+                "What facilities and resources are available for art and design students?",
+                "What is the curriculum structure for the art and design program?",
+                "Are there any notable alumni from the Department of Art and Design?",
+                "What extracurricular opportunities are available for art and design students?",
+                "How does the Department of Art and Design support student creativity and innovation?",
+                "What are the research areas within the Department of Art and Design?",
+                "How can students showcase their work in the Department of Art and Design?"
+            ],
+            "responses": [
+                "Miss Asiya Shah is the Head of the Department.The department of Art & Design was established in 2008 with a mission of introducing creative knowledge and skills in the region filled with beautiful landscapes and rich cultural heritage. Department of Art & Design is one of the leading art departments in KPK, offering undergraduate, graduate and (M.Phil) degree courses. Undergraduate level includes studio practice and theoretical studies, while M.Phil carries only theory and research..<br> Here is the link to the Department of Art and Design portal: <a href=\"https://www.hu.edu.pk/departmental-data/17\" style=\"color: white;\">Online Department of Art and Design Portal</a> <img src=\"/static/uploads/muslim-hijab-girl-illustration-vector.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_Communication_Media",
+            "patterns": [
+                "Communication",
+                "media",
+                "Media department",
+                "communication and media",
+                "Who is the head of the Department of Communication & Media?",
+                "What is the history of Communication & Media?",
+                "How many courses can we study in Communication & Media?",
+                "What facilities and resources are available for Communication & Media students?",
+                "How long is the Communication and Media program?",
+                "Does the Department of Communication and Media offer any online courses?",
+                "What is the mission of the Department of Communication and Media?",
+                "Does the Department of Communication and Media have a social media presence?",
+                "What are the office hours for the Department of Communication and Media?",
+                "Are there any study groups or tutoring services for Communication and Media students?"
+            ],
+            "responses": [
+                "Dr. Shujaat Ali Khan is the Head of the Department.Media has been considered as fourth pillar of a state since the inception of democratic form of governments around the globe as media is supposed to educate, inform, entertain and guide the masses in right direction in most aspects of life.Consequently the Department of Communication & Media Studies was established which started functioning in October 2006 with admissions/intake for Fall- semester 2006.<br> Here is the link to the Department of Communication & Media Studies portal: <a href=\"https://www.hu.edu.pk/departmental-data/16\" style=\"color: white;\">Online Department of Communication & Media Studies Portal</a><img src=\"/static/uploads/profile_6356344a9c5648.32832911.jpeg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_Conservation_Studies",
+            "patterns": [
+                "Conservation",
+                "communication and media",
+                "Who is the head of the Department of Conservation Studies?",
+                "What is the history of Conservation Studies?",
+                "How many courses can we study in Conservation Studies?",
+                "What facilities and resources are available for Conservation Studies students?",
+                "What career options do I have with a degree in Conservation Studies?",
+                "How long does it take to complete a degree in Conservation Studies?",
+                "What is the mission of the Department of Conservation Studies?",
+                "What facilities are available for Conservation Studies students?",
+                "Can I take Conservation Studies courses online?",
+                "Do I need any specific qualifications to study Conservation Studies?",
+                "How many students are in the Conservation Studies program?"
+            ],
+            "responses": [
+                "Dr. Zain ul Wahab is the Head of the Department. Hazara University established the Department of Conservation Studies to explore and identify the Archaeological sites to preserve relics, artifacts etc. relating to the bygone civilizations in a well-planned scientific way. The department got the credit of relevant experts in the field who have the professional skills, scientific knowledge and technical know-how to preserve/conserve these cultural assets. .<br> Here is the link to the Department of Conservation Studies portal: <a href=\"https://www.hu.edu.pk/departmental-data/14\" style=\"color: white;\">Online Department of Conservation Studies Portal</a> <img src=\"/static/uploads/profile_635636add446c5.46494680.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Education",
+            "patterns": [
+                "Education",
+                "Department of education",
+                "Tell me about the education dept",
+                "Who is the head of the education department?",
+                "What courses are available in education?",
+                "What career options do I have with a degree in education?",
+                "How long does it take to complete a degree in education?",
+                "What facilities are available for education students?",
+                "Can I take education courses online?",
+                "What is the history of the Department of education?"
+            ],
+            "responses": [
+                "Dr. Muhammad Ilyas Khan is the Head of the Department.The Department of Education (DE) was among the first four departments founded with the establishment of the university in 2002. The Department is currently among the top departments with regard to faculty, students and programs.<br> Here is the link to the Department of education portal: <a href=\"https://www.hu.edu.pk/departmental-data/54\" style=\"color: white;\">Online Department of education Portal</a><img src=\"/static/uploads/profile_63564f502975f5.05957512.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_English",
+            "patterns": [
+                "english",
+                "dept of English",
+                "What is the history of the Department of English?",
+                "Who is the head of the Department of English?",
+                "What courses are offered by the Department of English?",
+                "What are the research areas within the Department of English?",
+                "How does the Department of English support student career development?",
+                "What publications are associated with the Department of English?",
+                "What events and lectures are hosted by the Department of English?",
+                "Are there any online English courses available?",
+                "What writing resources does the Department of English offer?"
+            ],
+            "responses": [
+                "Dr. Mustanir Ahmad is the Head of the Department.Established in 2003, the Department of English is a centre of academic, intellectual and cultural activities. Apart from running its five full-time programmes i.e. BS English (Four-year); MA English; M.Phil Literature in English; M.Phil Applied Linguistics; and PhD English, the department provides support to all other departments of the hazara university.<br> Here is the link to the Department of English portal: <a href=\"https://www.hu.edu.pk/departmental-data/23\" style=\"color: white;\">Online Department of English Portal</a><img src=\"/static/uploads/profile_63567579c50c43.61026115.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Pakistan_Studies",
+            "patterns": [
+                "Pakistan studies",
+                "dept of pak studies",
+                "What is the history of the Department of Pakistan studies?",
+                "Who is the current head of the Department of Pakistan studies?",
+                "What courses are offered by the Department of Pakistan Studies?",
+                "What are the research areas within the Department of Pakistan Studies?",
+                "What are the office hours for the Department of Pakistan Studies?",
+                "Are there any online Pakistan Studies courses available?",
+                "What resources does the Department of Pakistan Studies offer?",
+                "What are the career options for graduates with a degree in Pakistan Studies?"
+            ],
+            "responses": [
+                "Miss. Ayesha Alam is the Head of the Department.Subject of Pakistan Studies was introduced in Pakistan at a time of national crisis. The separation of East Pakistan in 1971 led the ruling elites and scholars to the conclusion that there was an urgent need to study Pakistani society in a manner that would contribute to promotion of patriotism, national cohesion, strength and development..<br> Here is the link to the Department of Pakistan Studies portal: <a href=\"https://www.hu.edu.pk/departmental-data/25\" style=\"color: white;\">Online Department of Pakistan Studies Portal</a><img src=\"/static/uploads/muslim-hijab-girl-illustration-vector.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Tourism_and_Hospitality",
+            "patterns": [
+                "Tourism",
+                "Hospitality",
+                "dept of Tourism and Hospitality",
+                "What is the history of the Department of Tourism and Hospitality?",
+                "Who is the current head of the Department of Tourism and Hospitality?",
+                "When was the Department of Tourism and Hospitality created?",
+                "What programs does the Department of Tourism and Hospitality offer?",
+                "How can I get a job in the Department of Tourism and Hospitality?",
+                "How does the Department of Tourism and Hospitality help tourists?",
+                "What is the biggest project the Department of Tourism and Hospitality is working on?",
+                "What are some careers in tourism and hospitality?",
+                "How does the Department of Tourism and Hospitality promote tourism?",
+                "How does the Department of Tourism and Hospitality work with local businesses?"
+            ],
+            "responses": [
+                "Dr. Anas Mahmud Arif is the Head of the Department.The Department of Tourism and Hospitality was established at Hazara University Mansehra in 2008 with the aims to explore and promote natural and cultural resources of the country for tourism. The Department of Tourism and Hospitality is dedicated to develop sustainable tourism in Pakistan by imparting quality education, training and research in the tourism and hospitality sectors with main focus on preparing competitive managers and professionals for local, regional and global markets. .<br> Here is the link to the Department of tourism and hospitality portal: <a href=\"https://www.hu.edu.pk/departmental-data/19\" style=\"color: white;\">Online Department of tourism and hospitality Portal</a><img src=\"/static/uploads/profile_635679c85d2cd3.31934412.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Urdu",
+            "patterns": [
+                "Dept of Urdu",
+                "urdu",
+                "What is the history of the Department of Urdu?",
+                "Who is the head of the Department of Urdu?",
+                "When was the Department of Urdu established?",
+                "What programs and courses does the Department of Urdu offer?",
+                "What career opportunities are available with a degree in Urdu?",
+                "What research opportunities are available in the Department of Urdu?",
+                "How can students participate in Urdu literary events?",
+                "What resources does the Department of Urdu provide for language learning?",
+                "How does the Department of Urdu promote the Urdu language and literature?",
+                "Are there any famous alumni from the Department of Urdu?"
+            ],
+            "responses": [
+                "Dr. Nazar Abid is the Head of the Department.Department of Urdu was established at Garden Campus of Hazara University, Mansehra in May-2010.Dr.NazarAbid is working as Head of Department since 18/04/2013 till date. Dr.Sabir Kaloorvi Memorial Library has been established in the department containing about 25000 books.<br> Here is the link to the Department of Urdu portal: <a href=\"https://www.hu.edu.pk/departmental-data/15\" style=\"color: white;\">Online Department of Urdu Portal</a><img src=\"/static/uploads/ali.png\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Agriculture",
+            "patterns": [
+                "Agriculture",
+                "dept of agriculture",
+                "What is the history of the Department of Agriculture?",
+                "Who is the head of the Department of Agriculture?",
+                "What are the main responsibilities of the Department of Agriculture?",
+                "How does the Department of Agriculture support local farmers?",
+                "What are the major projects currently undertaken by the Department of Agriculture?",
+                "How does the Department of Agriculture promote sustainable farming practices?",
+                "What are the future plans and goals of the Department of Agriculture?",
+                "How can agricultural businesses collaborate with the Department of Agriculture?",
+                "What are the funding sources for the Department of Agriculture?",
+                "When was the Department of Agriculture established?",
+                "What programs and courses does the Department of Agriculture offer?"
+            ],
+            "responses": [
+                "Dr. Sajid Ali  is the Head of the Department.Department of Agriculture is working under Faculty of Science. It consists of three specialization, i.e. Plant Breeding & Genetics; Agronomy and Horticulture. Academically, it offers B.Sc.(Hons.) Agriculture (four years degree) in which the students have to study common courses during first 4 semesters.<br> Here is the link to the Department of Agriculture portal: <a href=\"https://www.hu.edu.pk/departmental-data/6\" style=\"color: white;\">Online Department of Agriculture Portal</a><img src=\"/static/uploads/profile_6411f9b7c35053.26132987.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Biochemistry",
+            "patterns": [
+                "Department of Biochemistry",
+                "Biochemistry",
+                "What is the history of the Department of Biochemistry?",
+                "Who is the  head of the Department of Biochemistry?",
+                "who is the hod of the department of biochemistry?",
+                "What programs and courses does the Department of Biochemistry offer?",
+                "How does the Department of Biochemistry support student research projects?",
+                "How can students participate in biochemistry conferences and seminars?",
+                "What are the future goals and plans of the Department of Biochemistry?",
+                "What lab facilities are available to students in the Department of Biochemistry?",
+                "What resources does the Department of Biochemistry provide for students?"
+            ],
+            "responses": [
+                "Dr. Muhammad Sajid is the Head of the Department.The Department of Biochemistry was established at Hazara University right from its opening in 2002 and has been fully functional since then. Hazara University is the pioneer in establishing full-fledged Department of Biochemistry in KPK to provide teaching and research facilities at graduate and postgraduate levels.<br> Here is the link to the Department of Biochemistry portal: <a href=\"https://www.hu.edu.pk/departmental-data/28\" style=\"color: white;\">Online Department of Biochemistry Portal</a><img src=\"/static/uploads/ali.png\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Genetics",
+            "patterns": [
+                "Department of Genetics",
+                "Genetics",
+                "biotechnology",
+                "What is the history of the Department of Biotechnology and Genetics?",
+                "Who is the  head of the Department of Biotechnology and Genetics?",
+                "Who is the  hod of Biotechnology and Genetics?",
+                "When was the Department of Biotechnology and Genetics established?",
+                "What courses does the Department of Biotechnology and Genetics offer?",
+                "What are the main research areas in the Department of Biotechnology and Genetics?",
+                "What careers can I pursue with a degree in biotechnology and genetics?",
+                "What lab facilities are available to students in the Department of Biotechnology and Genetics?",
+                "How can students attend biotechnology and genetics conferences and seminars?"
+            ],
+            "responses": [
+                "Dr Inam Ullah is the Head of the Department.The department of Genetics was established in 2005, in the First Meeting of Advanced Studies and Research Board of Hazara University, subsequently approved by the Academic Council and Syndicate of Hazara University. All the degrees are recognized by HEC, accepted nationally and internationally. <br> Here is the link to the Department of biotechnology and genetics portal: <a href=\"https://www.hu.edu.pk/departmental-data/5\" style=\"color: white;\">Online Department of biotechnology and genetics Portal</a><img src=\"/static/uploads/profile_635683eb3c5710.27818597.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Botany",
+            "patterns": [
+                "Department of Botany",
+                "botany",
+                "What is the history of the Department of Botany?",
+                "Who is the head of the Department of Botany?",
+                "Who is the HOD of Botany?",
+                "When was the Department of Botany established?",
+                "What courses does the Department of Botany offer?",
+                "What are the research areas in the Department of Botany?",
+                "Can you provide information on the Botany faculty members?",
+                "What facilities are available in the Botany department?",
+                "Are there any extracurricular activities in the Botany department?",
+                "What career opportunities are available for Botany graduates?",
+                "Can I visit the Botany department before applying?",
+                "Is there any internship program for Botany students?",
+                "How can I contact the Botany department?",
+                "What is the student-to-faculty ratio in the Botany department?",
+                "Are there any recent achievements by the Botany department?",
+                "What kind of laboratory facilities does the Botany department have?",
+                "Are there any field trips or practical sessions in the Botany curriculum?",
+                "What journals or publications is the Botany department involved in?",
+                "Can I transfer my credits from another university to the Botany program?",
+                "What is the duration of the Botany programs?",
+                "Do you offer any online courses in Botany?",
+                "What is the fee structure for the Botany programs?",
+                "What kind of student support services are available in the Botany department?"
+            ],
+            "responses": [
+                "Dr. Ghulam Mujtaba Shah is the Head of the Department.The Department of Botany, Hazara University was established in 2006. The Department has a distinguished history of excellence and provides outstanding mentoring and quality research facility within the region. The Department offers B.S (Hons), M.Sc, M.Phil and P.hD. programs.<br> Here is the link to the Department of Botany portal: <a href=\"https://www.hu.edu.pk/departmental-data/7\" style=\"color: white;\">Online Department of Botany Portal</a><img src=\"/static/uploads/profile_635687707fc6e5.32611835.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Microbiology",
+            "patterns": [
+                "Department of Microbiology",
+                "Microbiology",
+                "What is the history of the Department of Microbiology ?",
+                "Who is the  head of the Department of Microbiology ?",
+                "Who is the  hod of Microbiology ?",
+                "When was the Department of Microbiology started?",
+                "Who is in charge of the Microbiology department?",
+                "What courses does the Microbiology department offer?",
+                "Can I take any Microbiology courses online?",
+                "What research topics are covered in the Microbiology department?",
+                "Who are the Microbiology professors?",
+                "What facilities does the Microbiology department have?",
+                "Are there any recent achievements by the Microbiology department?",
+                "What labs are available in the Microbiology department?",
+                "What fieldwork opportunities are there for Microbiology students?",
+                "Are there any scholarships for Microbiology students?",
+                "What are the admission requirements for the Microbiology program?",
+                "Does the Microbiology department have any student clubs?",
+                "What careers can I pursue with a degree in Microbiology?",
+                "Does the Microbiology department offer internships?",
+                "Are there any upcoming Microbiology events or seminars?",
+                "How can I contact the Microbiology department for more information?",
+                "What technology is used in Microbiology research?",
+                "Are there any financial aid options for Microbiology students?",
+                "How can I get involved in Microbiology research as a student?"
+            ],
+            "responses": [
+                "Dr. Syed Kashif Haleem is the Head of the Department.Established in 2002, the Microbiology Department at Hazara University is a leading center for teaching and research. We offer various programs, starting with a 4-year Bachelor of Science (Honours) in Microbiology (BSc Hons), providing a strong foundation in microbiology.<br> Here is the link to the Department of Microbiology portal: <a href=\"https://www.hu.edu.pk/departmental-data/29\" style=\"color: white;\">Online Department of Microbiology Portal</a><img src=\"/static/uploads/profile_65350236e73400.16235601.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Zoology",
+            "patterns": [
+                "Department of Zoology",
+                "zoology",
+                "When was the Department of Zoology started?",
+                "who is the head of department of zoology?",
+                "who is the hod of dept of zoology?",
+                "what is the history of zoology dept?",
+                "Who is in charge of the Zoology department?",
+                "What courses does the Zoology department offer?",
+                "Can I take any Zoology courses online?",
+                "What research topics are covered in the Zoology department?",
+                "Who are the Zoology professors?",
+                "What facilities does the Zoology department have?",
+                "Are there any recent achievements by the Zoology department?",
+                "What labs are available in the Zoology department?",
+                "What fieldwork opportunities are there for Zoology students?",
+                "Does the Zoology department have any student clubs?",
+                "What careers can I pursue with a degree in Zoology?",
+                "Does the Zoology department offer internships?",
+                "Are there any upcoming Zoology events or seminars?",
+                "How can I contact the Zoology department for more information?",
+                "What technology is used in Zoology research?",
+                "Are there any financial aid options for Zoology students?",
+                "How can I get involved in Zoology research as a student?"
+            ],
+            "responses": [
+                "Dr. Shumaila Noreen is the Head of the Department.The Department of Zoology was established in August, 2008 (fall semester). Presently, 631 students are enrolled in BS MSc, MPhil and PhD programs and 1349 students are passed out. It is the third largest Department of Hazara University and the most productive Department in term of number of students, published research papers, articles and books.<br> Here is the link to the Department of Zoology portal: <a href=\"https://www.hu.edu.pk/departmental-data/4\" style=\"color: white;\">Online Department of Zoology Portal</a><img src=\"/static/uploads/profile_63563153a46a46.18491373.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Economics",
+            "patterns": [
+                "Department of Economics",
+                "economics",
+                "When was the Department of Economics started?",
+                "who is the HOD of department of economics?",
+                "what is the history of economics dept?",
+                "Who is in charge of the Economics department?",
+                "What courses does the Economics department offer?",
+                "Can I take any Economics courses online?",
+                "What research topics are covered in the Economics department?",
+                "Who are the Economics professors?",
+                "What facilities does the Economics department have?",
+                "Are there any recent achievements by the Economics department?",
+                "What labs are available in the Economics department?",
+                "What fieldwork opportunities are there for Economics students?",
+                "Does the Economics department have any student clubs?",
+                "What careers can I pursue with a degree in Economics?",
+                "Does the Economics department offer internships?",
+                "Are there any upcoming Economics events or seminars?",
+                "How can I contact the Economics department for more information?",
+                "What technology is used in Economics research?",
+                "Are there any financial aid options for Economics students?",
+                "How can I get involved in Economics research as a student?"
+            ],
+            "responses": [
+                "Dr Misbah Nosheen is the Head of the Department.The Department of Economics is one of the largest department in the Faculty of Arts. It was established in 2008. Professor Salauddin was appointed as the first head of department, and served the department for 4 years.Dr Misbah Nosheen is now heading the department along with the support of dedicated and professional faculty members.<br> Here is the link to the Department of Economics portal: <a href=\"https://www.hu.edu.pk/departmental-data/21\" style=\"color: white;\">Online Department of Economics Portal</a><img src=\"/static/uploads/profile_6356b0fc5ca579.25524141.jpg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Islamic_and_Religious_Studies",
+            "patterns": [
+                "Department of Islamic and Religious Studies",
+                "islamic",
+                "religious studies",
+                "department of islamic study",
+                "Who is the head of the Department of Islamic and Religious Studies?",
+                "What is the history of Islamic and Religious Studies?",
+                "How many courses can we study in Islamic and Religious Studies?",
+                "How do you teach about Islam and religion from different cultures?",
+                "What support is available for students with cultural or religious backgrounds?"
+            ],
+            "responses": [
+                "Dr. Muhammad Ibrahim is the Head of the Department.Department of Islamic and Religious Studies, Hazara University was established in the year of 2007 to provide opportunity to study the basic principles of different religion in general and of Islam in particular. The courses offered in the department at undergraduate and graduate level are interdisciplinary.<br> Here is the link to the Department of Islamic and Religious Studies portal: <a href=\"https://www.hu.edu.pk/departmental-data/32\" style=\"color: white;\">Online Department of Islamic and Religious Studies Portal</a><img src=\"/static/uploads/profile_651fe99dda9c61.07100497.jpeg\" style=\"width: 285px;height:450px;\">"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "Department_of_Law",
+            "patterns": [
+                "Department of Law",
+                "law",
+                "dept of law",
+                "Who is the head of the Department of Law?",
+                "What is the history of Law?",
+                "who is the hod of the dept of law?",
+                "Can you outline the organizational structure of the Law Department?",
+                "What are the qualifications required to become a member of the Law Department?",
+                "Can you explain the role of the Law Department in shaping public policy?",
+                "law",
+                "llb"
+            ],
+            "responses": [
+                "Mrs Nadia Noreen is the Head of the Department.The Department of Law was established in 2004 and has showed a tremendous outcome in a very short time and upraised to the highest level to be a School of Law in 2008. The degree courses, which were offered, have been adopted from the approved curriculum of the Higher Education Commission of Pakistan for LL.B, LL.M, and Ph.D.<br> Here is the link to the Department of law portal: <a href=\"https://www.hu.edu.pk/departmental-data/26\" style=\"color: white;\">Online Department of law Portal</a><img src=\"/static/uploads/muslim-hijab-girl-illustration-vector.jpg\" style=\"width: 285px;height:450px;\">"
             ],
             "context_set": ""
         },

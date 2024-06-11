@@ -38,7 +38,7 @@ def load_test(url, payload, num_requests):
     return responses, total_time, average_time
 
 if __name__ == "__main__":
-    num_requests = 100  # Number of concurrent requests to send
+    num_requests = 500# Number of concurrent requests to send
 
     print(f"Sending {num_requests} concurrent requests to {url}")
     responses, total_time, average_time = load_test(url, payload, num_requests)
